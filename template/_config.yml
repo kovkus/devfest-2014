@@ -1,10 +1,37 @@
-# Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
-baseurl: ""
-url: "http://yourdomain.com"
-
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+
+# Site settings
+title: GDG DevFest Season 2014
+email: contact@devfest.com
+description: "GDG DevFest is a set of events all around the world"
+baseurl: ""
+url: "http://devfest.com"
+
+# Locaion block
+eventLocationName: "Conference Hall"
+eventLocationAddress: "22 Teatral'na St, Lviv"
+eventStartTime: "2014-10-18T10:00"
+eventStartTimeHumanReadable: "10:00"
+eventEndTime: "2014-10-18T20:00"
+eventEndTimeHumanReadable: "20:00"
+eventPlaceCoordinates: "49.843237,24.028751"
+mapCenterCoordinates: "49.842537,24.025701"
+
+# Head
+metaKeywords: "event, gdg, devfest, google, programming, android, chrome, developers, lviv"
+twitterAccount: "@DevFest"
+socialImageSrc: "/img/hero.jpg"
+
+# Header
+eventDate: "October 26, 2014"
+typeoutTextValues: '"", "Season", "Ukraine", "Germany", "USA"'
+
+# About
+eventName: "GDG DevFest"
+
+# Footer
+gplusFollowUsUrl: "https://plus.google.com/events/c9c0oh98tjmovmorbjq3eanesc0"
+twitterFollowUsUrl: "https://twitter.com/search?q=%23devfest%20%23ua&mode=realtime"

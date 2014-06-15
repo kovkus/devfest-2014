@@ -24,8 +24,6 @@
   <div id="st-container" class="st-container">
     <div class="st-pusher">
       <div class="st-content">
-
-        {% include header.html %}
         
         {{ content }}
 
@@ -45,12 +43,12 @@
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
   <script>
     //Location properties
-    var eventPlace = new google.maps.LatLng(49.843237, 24.028751);
-    var centerMap = new google.maps.LatLng(49.842537, 24.025701);
+    var eventPlace = new google.maps.LatLng({{ site.eventPlaceCoordinates }});
+    var centerMap = new google.maps.LatLng({{ site.mapCenterCoordinates }});
 
     $(function () {
       $("#typeout-text").typed({
-        strings: ["", "Season", "Ukraine", "Germany", "USA"],
+        strings: [{{site.typeoutTextValues}}],
         typeSpeed: 150,
         backDelay: 900,
         loop: true
