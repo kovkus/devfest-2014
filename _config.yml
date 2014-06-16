@@ -7,7 +7,7 @@ permalink: pretty
 title: GDG DevFest Season 2014
 email: contact@devfest.com
 description: "GDG DevFest is a set of events all around the world"
-baseurl: ""
+baseurl: "/devfest-2014"
 url: "http://devfest.com"
 
 # Locaion block
