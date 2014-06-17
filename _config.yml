@@ -8,7 +8,10 @@ title: GDG DevFest Season 2014
 email: contact@devfest.com
 description: "GDG DevFest is a set of events all around the world"
 baseurl: "/devfest-2014"
-url: "http://devfest.com"
+url: "http://gdg-ukraine.github.io"
+permalink: /blog/:title
+googleAnalyticsTrackingId: "UA-43643469-3"
+googleAnalyticsSiteUrl: "gdg-ukraine.github.io"
 
 # Locaion block
 eventLocationName: "Conference Hall"
@@ -26,7 +29,7 @@ twitterAccount: "@DevFest"
 socialImageSrc: "/img/hero.jpg"
 
 # Header
-eventDate: "October 26, 2014"
+eventDate: "September - November, 2014"
 typeoutTextValues: '"", "Season", "Ukraine", "Germany", "USA"'
 
 # About
