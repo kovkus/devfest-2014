@@ -1,7 +1,21 @@
 (function ($) {
 
-
 	$(document).ready(function () {
+
+		$(window).load(function () {
+			var preloaderDelay = 350,
+				preloaderFadeOutTime = 800;
+
+			function hidePreloader() {
+				var loadingAnimation = $('#loading-animation'),
+					preloader = $('#preloader');
+				loadingAnimation.fadeOut();
+				preloader.delay(preloaderDelay).fadeOut(preloaderFadeOutTime);
+			}
+
+			hidePreloader();
+		});
+
 		if ($(window).width() < 768) {
 			$('.animated').removeClass('animated').removeClass('hiding');
 			$('.stat span').removeClass('timer');
@@ -33,18 +47,40 @@
 				});
 			}
 		});
+		
+		//Side menu
+        var container = $('.st-container');
+        $('#menu-trigger').click(function (event) {
+            event.stopPropagation();
+            var effect = $(this).attr('data-effect');
+            if (!container.hasClass('st-menu-open')) {
+                container.addClass(effect).delay(25).addClass('st-menu-open');
+            } else {
+                container.removeClass('st-menu-open');
+            }
+        });
+        $('.st-pusher').click(function () {
+            if (container.hasClass('st-menu-open')) {
+                container.removeClass('st-menu-open');
+            }
+        });
+        $(window).resize(function() {
+            if($(window).width()>767) {
+                container.removeClass('st-menu-open');
+            }
+        });
 
 		//Paralax effect
-//		$('section[data-type="background"]').each(function () {
-//			var $bgobj = $(this);
-//			$(window).scroll(function () {
-//				var yPos = -($window.scrollTop() / $bgobj.data('speed'));
-//				var coords = '50% ' + yPos + 'px';
-//				$bgobj.css({
-//					backgroundPosition: coords
-//				});
-//			});
-//		});
+		//		$('section[data-type="background"]').each(function () {
+		//			var $bgobj = $(this);
+		//			$(window).scroll(function () {
+		//				var yPos = -($window.scrollTop() / $bgobj.data('speed'));
+		//				var coords = '50% ' + yPos + 'px';
+		//				$bgobj.css({
+		//					backgroundPosition: coords
+		//				});
+		//			});
+		//		});
 	});
 
 

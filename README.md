@@ -5,9 +5,37 @@
 You can always check current dev version at http://gdg-ukraine.github.io/devfest-2014/
 
 ### Local development
-Generate site: `jekyll build -w --config _config.yml,_config-local.yml`
+Generate site: 
+```bash
 
-Start local server: `jekyll serve --config _config.yml,_config-local.yml`
+jekyll build -w --config _config.yml,_config-local.yml
+
+```
+
+Start local server: 
+```bash
+
+jekyll serve --config _config.yml,_config-local.yml
+
+```
+
+### Benefits
+* Simple and beautiful design
+* Responsive
+* SVG icons
+* Easily to configure
+* SEO friendly
+
+### TODO List
+* Sprites for images
+* Minimize js & css
+
+### Known issues
+* Stuck of parallax images
+
+### Contributors
+* Design and markup: [ozasadnyy](https://github.com/ozasadnyy)
+* Jekyll integration: [zasadnyy](https://github.com/zasadnyy)
 
 
 #### _More information comming soon... Stay tuned!_
