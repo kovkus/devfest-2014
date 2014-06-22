@@ -37,23 +37,24 @@
 	{% include analytics.html %}
 
 	<script src="{{ "/js/jquery-2.1.1.min.js " | prepend: site.baseurl }}"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="{{ "/js/bootstrap.min.js " | prepend: site.baseurl }}"></script>
-	<script src="{{ "/js/typed.js " | prepend: site.baseurl }}"></script>
-	<script src="{{ "/js/jquery.countTo.js " | prepend: site.baseurl }}"></script>
-	<script src="{{ "/js/jquery.appear.js " | prepend: site.baseurl }}"></script>
+	<script src="{{ "/js/typed.min.js " | prepend: site.baseurl }}"></script>
+	<script src="{{ "/js/jquery.countTo.min.js " | prepend: site.baseurl }}"></script>
+	<script src="{{ "/js/jquery.appear.min.js " | prepend: site.baseurl }}"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 	<script>
 		//Location properties
 		var eventPlace = new google.maps.LatLng({{site.eventPlaceCoordinates}});
 		var centerMap = new google.maps.LatLng({{site.mapCenterCoordinates}});
-
-		$(function () {
-			$("#typeout-text").typed({
-				strings: [{{site.typeoutTextValues}}],
-				typeSpeed: 150,
-				backDelay: 900,
-				loop: true
+		var mobileCenterMap = new google.maps.LatLng({{site.mapMobileCenterCoordinates}});
+		$(document).ready(function () {
+			$(function () {
+				$("#typeout-text").typed({
+					strings: [{{site.typeoutTextValues}}],
+					typeSpeed: 150,
+					backDelay: 900,
+					loop: true
+				});
 			});
 		});
 	</script>
