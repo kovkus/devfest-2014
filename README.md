@@ -1,7 +1,5 @@
 # GDG DevFest 2014 site template
 
-my test 
-
 ### Demo
 You can always check current dev version at http://gdg-ukraine.github.io/devfest-2014/
 
