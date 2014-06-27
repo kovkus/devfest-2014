@@ -1,6 +1,6 @@
 (function ($) {
 	$(document).ready(function () {
-
+		$('body').css('overflow', 'hidden');
 		$(window).load(function () {
 			var preloaderDelay = 350,
 				preloaderFadeOutTime = 800;
@@ -11,6 +11,7 @@
 				loadingAnimation.fadeOut();
 				preloader.delay(preloaderDelay).fadeOut(preloaderFadeOutTime);
 			}
+			$('body').css('overflow', 'auto');
 			hidePreloader();
 		});
 
@@ -18,7 +19,15 @@
 			$('.animated').removeClass('animated').removeClass('hiding');
 			$('.stat span').removeClass('timer');
 		}
-		
+		if ($(window).height() < 512) {
+			$('#bottom-navlinks').removeClass('bottom-navlinks').addClass('bottom-navlinks-small');
+		}
+		if ($(window).scrollTop() >= 100) {
+			console.log('more 100');
+			$('#top-header').addClass('after-scroll');
+			$('#logo-header').removeClass('logo-light').addClass('logo-dark');
+		}
+
 		$(window).scroll(function () {
 			var scroll = $(this).scrollTop();
 			var header = $('#top-header');
@@ -86,21 +95,34 @@
 		var container = $('.st-container');
 		$('#menu-trigger').click(function (event) {
 			event.stopPropagation();
+			var top = $(window).scrollTop();
+			var left = $(window).scrollLeft()
 			var effect = $(this).attr('data-effect');
+
 			if (!container.hasClass('st-menu-open')) {
 				container.addClass(effect).delay(25).addClass('st-menu-open');
+				$('body').css('overflow', 'hidden');
 			} else {
 				container.removeClass('st-menu-open');
+				$('body').css('overflow', 'auto');
 			}
 		});
 		$('.st-pusher').click(function () {
 			if (container.hasClass('st-menu-open')) {
 				container.removeClass('st-menu-open');
+				$('body').css('overflow', 'auto');
+				$(window).unbind('scroll');
 			}
 		});
 		$(window).resize(function () {
 			if ($(window).width() > 767) {
 				container.removeClass('st-menu-open');
+			}
+			var bottomNavLinks = $('#bottom-navlinks');
+			if ($(window).height() < 512) {
+				bottomNavLinks.removeClass('bottom-navlinks').addClass('bottom-navlinks-small');
+			} else {
+				bottomNavLinks.removeClass('bottom-navlinks-small').addClass('bottom-navlinks');
 			}
 		});
 	});
