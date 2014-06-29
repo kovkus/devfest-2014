@@ -9,14 +9,12 @@ Generate site:
 ```bash
 
 jekyll build -w --config _config.yml,_config-local.yml
-
 ```
 
 Start local server: 
 ```bash
 
 jekyll serve --config _config.yml,_config-local.yml
-
 ```
 
 ### Benefits
@@ -31,7 +29,8 @@ jekyll serve --config _config.yml,_config-local.yml
 * Minimize js & css
 
 ### Known issues
-* Stuck of parallax images
+* ~~Stuck of parallax images~~
+* Scrolling on open navbar
 
 ### Contributors
 * Design and markup: [ozasadnyy](https://github.com/ozasadnyy)
