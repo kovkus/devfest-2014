@@ -1,0 +1,36 @@
+<!-- Begin Speakers Modals -->
+<div class="modals">
+    {% for speaker in site.data.speakers %}
+    <div class="modal fade text-left speaker-modal" id="speakerDetail-{{ speaker.id }}" tabindex="-1" role="dialog" aria-labelledby="speakerDetailLabel-{{ speaker.id }}" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="close">
+                        <svg class="icon icon-cross" viewBox="0 0 32 32">
+                            <use xlink:href="#icon-cross"></use>
+                        </svg>
+                        <div class="close-mask" data-dismiss="modal"></div>
+                    </div>
+                    <h4>{{ speaker.report.title }}</h4>
+                    <p class="theme-description">{{ speaker.report.description }}</p>
+                    <hr>
+                    <div class="speaker-details">
+                        <div class="row">
+                            <div class="col-md-2 col-sm-2">
+                                <div class="flow-img img-circle speaker-img" style="background-image: url({{ site.baseurl }}/img/speakers/{{ speaker.name }}{{ speaker.surname }}.jpg)"></div>
+                            </div>
+                            <div class="col-md-10 col-sm-10 details">
+                                <p class="name">{{ speaker.name }} {{ speaker.surname }}
+                                    <span class="position">{{ speaker.position }}, {{ speaker.organization }}</span>
+                                </p>
+                                <p class="about">{{ speaker.about }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<!-- End Speakers Modals -->

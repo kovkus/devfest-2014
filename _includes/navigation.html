@@ -1,30 +1,32 @@
 <header id="top-header" class="col-lg-10 col-sm-12">
-	<svg id="menu-trigger" class="icon icon-menu visible-xs" viewBox="0 0 32 32" data-effect="st-effect">
-		<use xlink:href="#icon-menu"></use>
-	</svg>
-	<a href="index.html" id="logo-header" class="logo-header logo-light"></a>
-	<nav class="st-menu st-effect" id="menu">
-		<div class="logo-navbar logo-dark visible-xs"></div>
-		<ul>
-			<li><a {% if page.permalink=='/' %} class="current" {% endif %} href="{{ site.baseurl }}/">Home</a>
-			</li>
-			<li><a {% if page.permalink=='/blog/' %} class="current" {% endif %} href="{{ site.baseurl }}/blog/">Blog</a>
-			</li>
-			<li><a href="#">Schedule</a>
-			</li>
-			<li><a href="#">Speakers</a>
-			</li>
-			<li><a href="#">Team</a>
-			</li>
-			<li><a href="#">Hackathon</a>
-			</li>
-			<li><a href="#">Logistics</a>
-			</li>
-		</ul>
-		<ul id="bottom-navlinks" class="bottom-navlinks visible-xs">
-			<li><a href="#">Buy tickets</a>
-			</li>
-		</ul>
-		<a id="buy-tickets-button" href="#" class="btn btn-primary pull-right hidden-xs hidden-sm hidden">Buy tickets</a>
-	</nav>
+    <svg id="menu-trigger" class="icon icon-menu visible-xs" viewBox="0 0 32 32" data-effect="st-effect">
+        <use xlink:href="#icon-menu"></use>
+    </svg>
+    <a href="index.html" id="logo-header" class="logo-header logo-light"></a>
+    <nav class="st-menu st-effect" id="menu">
+        <div class="logo-navbar logo-dark visible-xs"></div>
+        <ul>
+            <li><a {% if page.permalink=="/" %} class="current" {% endif %} href="{{ site.baseurl }}/">Home</a>
+            </li>
+            <li><a {% if page.permalink=="/blog/" %} class="current" {% endif %} href="{{ site.baseurl }}/blog/">Blog</a>
+            </li>
+            <li><a href="#">Schedule</a>
+            </li>
+            <li><a {% if page.permalink=="/speakers/" %} class="current" {% endif %} href="{{ site.baseurl }}/speakers/">Speakers</a>
+            </li>
+            <li><a href="#">Team</a>
+            </li>
+            <li><a href="#">Hackathon</a>
+            </li>
+            <li><a href="#">Logistics</a>
+            </li>
+        </ul>
+        <ul id="bottom-navlinks" class="bottom-navlinks visible-xs">
+            <li><a href="#">Buy tickets</a>
+            </li>
+            <li><a href="#">Call for papers</a>
+            </li>
+        </ul>
+        <a id="buy-tickets-button" href="#" class="btn btn-primary pull-right hidden-xs hidden-sm hidden">Buy tickets</a>
+    </nav>
 </header>
