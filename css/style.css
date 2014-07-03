@@ -69,7 +69,6 @@ h6 {
     display: inline-block;
     width: 32px;
     height: 32px;
-
     fill: #464646;
 }
 .logo-dark {
@@ -351,8 +350,8 @@ nav ul> li > a:hover {
 .icon-menu {
     width: 20px;
     height: 20px;
-
     fill: #e6e6e6;
+    cursor: pointer;
 }
 .bottom-navlinks {
     position: absolute;
@@ -386,6 +385,7 @@ nav ul> li > a:hover {
 #top-section-hero .jumbotron {
     position: relative;
     top: 50%;
+    left: 0;
     background: none;
     color: #fff;
     -webkit-transform: translateY(-50%);
@@ -789,7 +789,6 @@ nav ul> li > a:hover {
     color: #fff;
     text-transform: uppercase;
     font-size: 1.25em;
-
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
@@ -856,7 +855,6 @@ nav ul> li > a:hover {
     text-overflow: ellipsis;
     font-size: 16px;
     line-height: 1.5;
-
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
@@ -903,7 +901,6 @@ nav ul> li > a:hover {
     width: 19px;
     height: 19px;
     outline: none;
-
     fill: #000;
 }
 .close-mask {
@@ -1010,7 +1007,6 @@ nav ul> li > a:hover {
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
     transition: all 0.5s;
-
     fill: #8b8b8b;
 }
 .icon-google-plus:hover {
@@ -1068,12 +1064,23 @@ nav ul> li > a:hover {
         background-attachment: initial;
     }
     /* END GLOBAL */
-    /* TOP SECTION */
+    /* TOP SECTION HERO*/
+    #top-section-hero .jumbotron {
+        left: 0;
+    }
     .jumbotron h1 {
         font-size: 3.2em;
     }
     .explore {
         bottom: 3em;
+    }
+    /* --END TOP SECTION HERO*/
+    /* --TOP SECTION */
+    #top-section {
+        min-height: 250px;
+    }
+    .jumbotron {
+        left: 1em;
     }
     /* --END TOP SECTION */
     /* NAVBAR */
@@ -1243,10 +1250,13 @@ nav ul> li > a:hover {
     }
     /* END SUBSCRIBE SECTION */
     /* SPEAKERS*/
+    .speaker-modal h4 {
+        font-size: 2.2em;
+    }
     .speaker-details .speaker-img {
         margin: .8em auto;
-        width: 140px;
-        height: 140px;
+        width: 120px;
+        height: 120px;
     }
     .speaker-details .details {
         padding-left: 0;
