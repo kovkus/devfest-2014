@@ -23,6 +23,8 @@ eventEndTimeHumanReadable: "20:00"
 eventPlaceCoordinates: "49.843237,24.028751"
 mapCenterCoordinates: "49.842537,24.025701"
 mapMobileCenterCoordinates: "49.841620, 24.029411"
+logisticsMapCenterCoordinates: "49.056728, 3.117289"
+logisticsMapMobileCenterCoordinates: "44.347164, 23.175017"
 
 # Subscribe
 subscribeAction: "http://gdg.us5.list-manage1.com/subscribe/post?u=9fc8aa205b0521b5f05fc8e1e&amp;id=ae0fb459fc"
@@ -38,6 +40,9 @@ typeoutTextValues: '"", "Season", "Ukraine", "Germany", "USA"'
 
 # About
 eventName: "GDG DevFest"
+
+#Team
+aboutUs: Google knows throughout the earth. Even people who fly out of the planet knows about Google. Google intimately penetrated into human ordinariness. Google's services have become synonymous with simple things online. For ordinary users, all these technologies look beautiful web services, and in fact, each of these services is a huge stack of technologies. Number of technological innovations and IT industries in which Google is creating new products is enormous. Get to know them all is difficult, but realistic. This is why people have started to associate in small local groups and share experiences. Subsequently, the following groups of people started calling Google Developer Group.
 
 # Footer
 gplusFollowUsUrl: "https://plus.google.com/events/c9c0oh98tjmovmorbjq3eanesc0"

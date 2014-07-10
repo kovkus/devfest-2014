@@ -376,7 +376,9 @@
 									</ul>
 								</div>
 								<a href="https://www.google.com/maps/dir//Teatral'na+St,+22,+Lviv,+79000/@49.8433784,24.0280573,18z/data=!4m12!1m3!3m2!1s0x0:0x6cf545e48e348c1f!2z0JrQhtCd0J7Qn9CQ0JvQkNCm!4m7!1m0!1m5!1m1!1s0x473add72950f6e8d:0x6cf545e48e348c1f!2m2!1d24.028718!2d49.843293" class="pull-right" target="_blank">
-									<img src="img/svg/direction.svg">
+									<svg class="icon icon-direction" viewBox="0 0 32 32">
+										<use xlink:href="img/sprites/sprites.svg#icon-direction"></use>
+									</svg>
 								</a>
 							</div>
 						</div>
@@ -594,7 +596,7 @@
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 	<script>
 		//Location properties
-        var googleMaps = true;
+		var googleMaps = 'index';
 		var eventPlace = new google.maps.LatLng(49.843237, 24.028751);
 		var centerMap = new google.maps.LatLng(49.842537, 24.025701);
 		var mobileCenterMap = new google.maps.LatLng(49.841620, 24.029411);

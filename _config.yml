@@ -23,6 +23,8 @@ eventEndTimeHumanReadable: "20:00"
 eventPlaceCoordinates: "49.843237,24.028751"
 mapCenterCoordinates: "49.842537,24.025701"
 mapMobileCenterCoordinates: "49.841620, 24.029411"
+logisticsMapCenterCoordinates: "49.056728, 3.117289"
+logisticsMapMobileCenterCoordinates: "44.347164, 23.175017"
 
 # Subscribe
 subscribeAction: "http://gdg.us5.list-manage1.com/subscribe/post?u=9fc8aa205b0521b5f05fc8e1e&amp;id=ae0fb459fc"

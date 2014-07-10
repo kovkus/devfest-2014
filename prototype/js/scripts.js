@@ -98,6 +98,19 @@
             });
         });
 
+        $('.same-height-wrapper').each(function () {
+            var max = 0;
+            $('.same-height').each(function () {
+                var height = $(this).height();
+                if (height > max) {
+                    max = height;
+                }
+            });
+            $('.same-height').each(function () {
+                $(this).height(max);
+            });
+        });
+
         //Side menu
         var container = $('.st-container');
         $('#menu-trigger').click(function (event) {
@@ -143,22 +156,36 @@
     });
 
     //Google plus
-    if (typeof googleMaps !== 'undefined') {
-        (function () {
-            var po = document.createElement('script');
-            po.type = 'text/javascript';
-            po.async = true;
-            po.src = 'https://apis.google.com/js/platform.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(po, s);
-        })();
+    (function () {
+        var po = document.createElement('script');
+        po.type = 'text/javascript';
+        po.async = true;
+        po.src = 'https://apis.google.com/js/platform.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(po, s);
+    })();
 
-        //Google maps
-        var map;
+    //Google maps
+    if (typeof googleMaps !== 'undefined') {
+        var map, autocomplete, directionsDisplay, geocoder, polyline, origin;
+        var markers = [];
+        var directionsService = new google.maps.DirectionsService();
         var MY_MAPTYPE_ID = 'custom_style';
+        var icon = 'img/map-marker.png';
 
         function initialize() {
-            var featureOpts = [
+            directionsDisplay = new google.maps.DirectionsRenderer({
+                suppressMarkers: true
+            });
+            geocoder = new google.maps.Geocoder();
+
+            polyline = new google.maps.Polyline({
+                strokeColor: '#03a9f4',
+                strokeOpacity: 1,
+                strokeWeight: 2
+            });
+
+            var indexOpts = [
                 {
                     stylers: [
                         {
@@ -195,12 +222,102 @@
     ]
    }
   ];
+            var defaultOpts = [
+                {
+                    stylers: [
+                        {
+                            lightness: 40
+     },
+                        {
+                            visibility: 'on'
+     },
+                        {
+                            gamma: 0.9
+     },
+                        {
+                            weight: 0.4
+     }
+    ]
+   },
+                {
+                    elementType: 'labels',
+                    stylers: [
+                        {
+                            visibility: 'off'
+     }
+    ]
+   },
+                {
+                    featureType: 'water',
+                    stylers: [
+                        {
+                            color: '#5dc7ff'
+     }
+    ]
+   },
+                {
+                    featureType: 'road',
+                    stylers: [
+                        {
+                            visibility: 'off'
+     }
+    ]
+   }
+  ];
+
+            var zoomedOpts = [
+                {
+                    stylers: [
+                        {
+                            lightness: 40
+     },
+                        {
+                            visibility: 'on'
+     },
+                        {
+                            gamma: 1.1
+     },
+                        {
+                            weight: 0.9
+     }
+    ]
+   },
+                {
+                    elementType: 'labels',
+                    stylers: [
+                        {
+                            visibility: 'off'
+     }
+    ]
+   },
+                {
+                    featureType: 'water',
+                    stylers: [
+                        {
+                            color: '#5dc7ff'
+     }
+    ]
+   },
+                {
+                    featureType: 'road',
+                    stylers: [
+                        {
+                            visibility: 'on'
+     }
+    ]
+   }
+  ];
 
             var mapOptions = {
                 zoom: 17,
+                minZoom: 2,
                 scrollwheel: false,
                 panControl: false,
+                draggable: false,
                 zoomControl: false,
+                zoomControlOptions: {
+                    position: google.maps.ControlPosition.RIGHT_TOP
+                },
                 scaleControl: false,
                 mapTypeControl: false,
                 streetViewControl: false,
@@ -213,18 +330,195 @@
             if ($(window).width() < 768) {
                 mapOptions.center = mobileCenterMap;
             }
+            if (googleMaps == 'logistics') {
+                mapOptions.zoom = 5;
+                mapOptions.zoomControl = true;
+            }
 
             map = new google.maps.Map(document.getElementById('canvas-map'), mapOptions);
             var marker = new google.maps.Marker({
                 position: eventPlace,
+                animation: google.maps.Animation.DROP,
+                icon: icon,
                 map: map
             });
-            var styledMapOptions = {
-                name: 'Custom Style'
+            markers.push(marker);
+            var indexMapOptions = {
+                name: 'Index Style'
             };
+            var defaultMapOptions = {
+                name: 'Default Style'
+            };
+            var zoomedMapOptions = {
+                name: 'Zoomed Style'
+            };
+            var indexMapType = new google.maps.StyledMapType(indexOpts, indexMapOptions);
+            var defaultMapType = new google.maps.StyledMapType(defaultOpts, defaultMapOptions);
+            var zoomedMapType = new google.maps.StyledMapType(zoomedOpts, zoomedMapOptions);
+            map.mapTypes.set('index', indexMapType);
+            map.mapTypes.set('default', defaultMapType);
+            map.mapTypes.set('zoomed', zoomedMapType);
+            if (googleMaps === 'logistics') {
+                map.setMapTypeId('default');
+                var input = (document.getElementById('location-input'));
+                autocomplete = new google.maps.places.Autocomplete(input);
+                google.maps.event.addListener(autocomplete, 'place_changed', function () {
+                    marker.setVisible(false);
+                    var place = autocomplete.getPlace();
+                    if (place.geometry == 'undefined' || !place.geometry) {
+                        return;
+                    }
+                    var address = '';
+                    if (place.address_components) {
+                        address = [
+                            (place.address_components[0] && place.address_components[0].short_name || ''), (place.address_components[1] && place.address_components[1].short_name || ''), (place.address_components[2] && place.address_components[2].short_name || '')
+     ].join(' ');
+                    }
+                    geocoder.geocode({
+                        'address': address
+                    }, function (results, status) {
+                        if (status == google.maps.GeocoderStatus.OK) {
+                            origin = results[0].geometry.location;
+                            calcRoute(origin, 'TRANSIT');
+                        } else {
+                            alert('Geocode was not successful for the following reason: ' + status);
+                        }
+                    });
+                });
 
-            var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
-            map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
+            } else {
+                map.setMapTypeId('index');
+            }
+
+            function calcRoute(origin, selectedMode) {
+                var request = {
+                    origin: origin,
+                    destination: eventPlace,
+                    travelMode: google.maps.TravelMode[selectedMode]
+                };
+                directionsService.route(request, function (response, status) {
+                    if (status == google.maps.DirectionsStatus.OK) {
+                        map.setMapTypeId('zoomed');
+                        directionsDisplay.setMap(map);
+                        directionsDisplay.setDirections(response);
+                        var leg = response.routes[0].legs[0];
+                        makeMarker(leg.start_location);
+                        makeMarker(leg.end_location);
+                        $('#distance').text(leg.distance.text);
+                        $('#estimateTime').text(leg.duration.text);
+                        $('#mode-select').val(selectedMode);
+                        $('#mode').removeClass('hidden');
+                        var attribute = $('#mode-icon use').attr('xlink:href');
+                        attribute = attribute.substring(0, attribute.indexOf('#') + 1) + 'icon-' + selectedMode.toLowerCase();
+                        $('#mode-icon use').attr('xlink:href', attribute);
+                    } else if (status != google.maps.DirectionsStatus.OK && selectedMode != 'DRIVING') {
+                        calcRoute(origin, 'DRIVING');
+                    } else {
+                        var path = polyline.getPath();
+                        path.push(origin);
+                        path.push(eventPlace);
+                        makeMarker(origin);
+                        makeMarker(eventPlace);
+                        var bounds = new google.maps.LatLngBounds();
+                        bounds.extend(origin);
+                        bounds.extend(eventPlace);
+                        map.fitBounds(bounds);
+                        polyline.setMap(map);
+                        var distance = Math.round(google.maps.geometry.spherical.computeDistanceBetween(origin, eventPlace)/1000);
+                        $('#distance').text(distance + ' km');
+                        $('#estimateTime').text('');
+                        $('#find-flight').removeClass('hidden');
+                        $('#mode').addClass('hidden');
+                    }
+                });
+                deleteMarkers();
+                $('#find-way').addClass('location-active');
+                setDirectionInput(origin);
+                $('#find-way h3').removeClass('fadeInUp').addClass('fadeOutDown');
+            }
+
+            function makeMarker(position) {
+                var directionMarker = new google.maps.Marker({
+                    position: position,
+                    map: map,
+                    icon: icon
+                });
+                markers.push(directionMarker);
+            }
+
+            function addMarker(location) {
+                var marker = new google.maps.Marker({
+                    position: location,
+                    map: map
+                });
+                markers.push(marker);
+            }
+
+            function deleteMarkers() {
+                for (var i = 0; i < markers.length; i++) {
+                    markers[i].setMap(null);
+                }
+                markers = [];
+            }
+
+            function smoothZoom(level) {
+                var currentZoom = map.getZoom(),
+                    timeStep = 50;
+                var numOfSteps = Math.abs(level - currentZoom);
+                var step = (level > currentZoom) ? 1 : -1;
+                for (var i = 0; i < numOfSteps; i++) {
+                    setTimeout(function () {
+                        currentZoom += step;
+                        map.setZoom(currentZoom);
+                    }, (i + 1) * timeStep);
+                }
+            }
+
+            function setDirectionInput(origin) {
+                geocoder.geocode({
+                    'latLng': origin
+                }, function (results, status) {
+                    if (status == google.maps.GeocoderStatus.OK && results[1]) {
+                        var arrAddress = results[1].address_components;
+                        $.each(arrAddress, function (i, address_component) {
+                            if (address_component.types[0] == "locality") {
+                                $('#result-name').text(address_component.long_name);
+                                return false;
+                            }
+                        });
+                    }
+                });
+            }
+
+            $('#mode-select').change(function () {
+                var selectedMode = $(this).val();
+                calcRoute(origin, selectedMode);
+            });
+
+
+            $("#direction-locate").click(function () {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function (position) {
+                        origin = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                        calcRoute(origin, 'TRANSIT');
+                    });
+                }
+            });
+
+            $("#direction-cancel").click(function () {
+                $('#find-way').removeClass('location-active');
+                $('#location-input').val('');
+                $("#find-flight").addClass('hidden');
+                deleteMarkers();
+                directionsDisplay.setMap(null);
+                polyline.setMap(null);
+                map.setMapTypeId('default');
+                map.panTo(eventPlace);
+                map.setCenter(centerMap);
+                makeMarker(eventPlace);
+                smoothZoom(5);
+                $('#find-way h3').removeClass('fadeOutDown').addClass('fadeInUp');
+            });
         }
 
         google.maps.event.addDomListener(window, 'load', initialize);
