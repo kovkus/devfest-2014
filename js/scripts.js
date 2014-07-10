@@ -13,6 +13,7 @@
             }
             $('body').css('overflow', 'auto');
             hidePreloader();
+            generateSameHeight();
         });
 
         if ($(window).width() < 768) {
@@ -98,18 +99,22 @@
             });
         });
 
-        $('.same-height-wrapper').each(function () {
-            var max = 0;
-            $('.same-height').each(function () {
-                var height = $(this).height();
-                if (height > max) {
-                    max = height;
-                }
-            });
-            $('.same-height').each(function () {
-                $(this).height(max);
-            });
-        });
+        function generateSameHeight() {
+            if ($(window).width() > 767) {
+                $('.same-height-wrapper').each(function () {
+                    var max = 0;
+                    $('.same-height').each(function () {
+                        var height = $(this).height();
+                        if (height > max) {
+                            max = height;
+                        }
+                    });
+                    $('.same-height').each(function () {
+                        $(this).height(max);
+                    });
+                });
+            }
+        }
 
         //Side menu
         var container = $('.st-container');
@@ -135,15 +140,21 @@
         });
 
         $(window).resize(function () {
-            if ($(window).width() > 767 && container.hasClass('st-menu-open')) {
-                container.removeClass('st-menu-open');
-                $('body').css('overflow', 'auto');
+            if ($(window).width() > 767) {
+                if (container.hasClass('st-menu-open')) {
+                    container.removeClass('st-menu-open');
+                    $('body').css('overflow', 'auto');
+                }
+                generateSameHeight()
             }
             var bottomNavLinks = $('#bottom-navlinks');
             if ($(window).height() < 512) {
                 bottomNavLinks.removeClass('bottom-navlinks').addClass('bottom-navlinks-small');
             } else {
                 bottomNavLinks.removeClass('bottom-navlinks-small').addClass('bottom-navlinks');
+            }
+            if ($(window).width() < 768) {
+                $('.same-height').css('height', '100%');
             }
         });
 
@@ -184,43 +195,6 @@
                 strokeWeight: 2
             });
 
-            var indexOpts = [
-                {
-                    stylers: [
-                        {
-                            saturation: -20
-     },
-                        {
-                            lightness: 30
-     },
-                        {
-                            visibility: 'simplified'
-     },
-                        {
-                            gamma: 0.8
-     },
-                        {
-                            weight: 0.8
-     }
-    ]
-   },
-                {
-                    elementType: 'labels',
-                    stylers: [
-                        {
-                            visibility: 'on'
-     }
-    ]
-   },
-                {
-                    featureType: 'water',
-                    stylers: [
-                        {
-                            color: '#dee8ff'
-     }
-    ]
-   }
-  ];
             var defaultOpts = [
                 {
                     stylers: [
@@ -312,7 +286,7 @@
                 minZoom: 2,
                 scrollwheel: false,
                 panControl: false,
-                draggable: false,
+                draggable: true,
                 zoomControl: false,
                 zoomControlOptions: {
                     position: google.maps.ControlPosition.RIGHT_TOP
@@ -342,19 +316,14 @@
                 map: map
             });
             markers.push(marker);
-            var indexMapOptions = {
-                name: 'Index Style'
-            };
             var defaultMapOptions = {
                 name: 'Default Style'
             };
             var zoomedMapOptions = {
                 name: 'Zoomed Style'
             };
-            var indexMapType = new google.maps.StyledMapType(indexOpts, indexMapOptions);
             var defaultMapType = new google.maps.StyledMapType(defaultOpts, defaultMapOptions);
             var zoomedMapType = new google.maps.StyledMapType(zoomedOpts, zoomedMapOptions);
-            map.mapTypes.set('index', indexMapType);
             map.mapTypes.set('default', defaultMapType);
             map.mapTypes.set('zoomed', zoomedMapType);
             if (googleMaps === 'logistics') {
@@ -386,7 +355,7 @@
                 });
 
             } else {
-                map.setMapTypeId('index');
+                map.setMapTypeId('zoomed');
             }
 
             function calcRoute(origin, selectedMode) {
@@ -423,7 +392,7 @@
                         bounds.extend(eventPlace);
                         map.fitBounds(bounds);
                         polyline.setMap(map);
-                        var distance = Math.round(google.maps.geometry.spherical.computeDistanceBetween(origin, eventPlace)/1000);
+                        var distance = Math.round(google.maps.geometry.spherical.computeDistanceBetween(origin, eventPlace) / 1000);
                         $('#distance').text(distance + ' km');
                         $('#estimateTime').text('');
                         $('#find-flight').removeClass('hidden');
@@ -513,7 +482,11 @@
                 polyline.setMap(null);
                 map.setMapTypeId('default');
                 map.panTo(eventPlace);
-                map.setCenter(centerMap);
+                if ($(window).width() < 768) {
+                    map.setCenter(mobileCenterMap);
+                } else {
+                    map.setCenter(centerMap);
+                }
                 makeMarker(eventPlace);
                 smoothZoom(5);
                 $('#find-way h3').removeClass('fadeOutDown').addClass('fadeInUp');
