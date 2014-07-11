@@ -1,18 +1,46 @@
----
-layout: default
----
+--- 
+layout: default 
+--- 
 
 {% include navigation.html %}
 
-<div class="post">
+<div class="row post">
 
-  <header class="post-header">
-    <h1>{{ page.title }}</h1>
-    <p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
+    <a href="#" title="{{ page.title }}"><h4>{{ page.title }}</h4></a>
+    <header class="post-header">
+        <p class="meta"></p>
+        <div class="published pull-left">
+            <span class="publish-date">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</span>
+        </div>
+        <div class="share pull-right">
+            <ul class="social-links">
+                <li>
+                    <a href="#" target="_blank">
+                        <svg class="icon icon-google-plus" viewBox="0 0 30 32">
+                            <use xlink:href="img/sprites/sprites.svg#icon-google-plus"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <svg class="icon icon-twitter" viewBox="0 0 30 32">
+                            <use xlink:href="img/sprites/sprites.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <svg class="icon icon-facebook" viewBox="0 0 30 32">
+                            <use xlink:href="img/sprites/sprites.svg#icon-facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
 
-  <article class="post-content">
-  {{ content }}
-  </article>
+    <article class="post-body">
+        {{ content }}
+    </article>
 
 </div>
