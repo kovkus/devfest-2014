@@ -4,21 +4,27 @@
 		<div class="col-lg-10 col-lg-offset-1">
 			<div class="row text-left">
 				{% for speaker in site.data.speakers %}
-				<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-					<div class="speaker-item animated hiding {{ speaker.color }}-background" data-animation="fadeInUp" data-toggle="modal" data-target="#speakerDetail-{{ speaker.id }}">
-						<div class="speaker-head">
-							<figure class="flow-img" style="background-image: url({{ site.baseurl }}/img/speakers/{{ speaker.name }}{{ speaker.surname }}.jpg)">
-								<figcaption>
-									<h2 class="name">{{ speaker.name }} <span>{{ speaker.surname }}</span></h2>
-									<p class="position">{{ speaker.organization }}</p>
-								</figcaption>
-							</figure>
-						</div>
-						<div class="speaker-bottom">
-							<p class="title">{{ speaker.report.title }}</p>
+					<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+						<div class="speaker-item animated hiding green-background" data-animation="fadeInUp" data-toggle="modal" data-target="#speakerDetail-{{ speaker.id }}">
+							<div class="speaker-head">
+								<figure class="flow-img" style="background-image: url({{ speaker.thumbnailUrl }})">
+									<figcaption>
+										<h2 class="name">{{ speaker.name }} <span>{{ speaker.surname }}</span></h2>
+										<p class="position">{{ speaker.company }}</p>
+									</figcaption>
+								</figure>
+							</div>
+							<div class="speaker-bottom">
+								{% for session in site.data.sessions %}
+									{% for session_speaker in session.speakers %}
+										{% if session_speaker == speaker.id %}
+											<p class="title">{{ session.title }}</p>
+										{% endif %}
+									{% endfor %}		
+								{% endfor %}
+							</div>
 						</div>
 					</div>
-				</div>
 				{% endfor %}
 			</div>
 			<a class="bottom-section-link" href="#">Call for paper</a>

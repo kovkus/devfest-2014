@@ -1,60 +1,76 @@
-    - 
-      id: 0
-      name: "Oleh"
-      surname: "Zasadnyy"
-      organization: "GDG Lviv"
-      position: "Designer"
-      about: "Finalist of Google I/O 2013, GDG DevFest 2013, Google I/O 2014 T-Shirt design contest. Web developer."
-      report: 
-        title: "Material design: Visual style and imagery"
-        description: "This session will reveal the invisible structures behind the material design system. Designers will show how to use the new color systems, typographic strategies, and the underlying grids that hold it together. They will show how imagery and the new framework material rendering can make apps more interesting and communicate more quickly."
-      color: "azure"
-      team: true
-      social: 
-        - {name: "google-plus", link: "https://google.com/+OlehZasadnyy"}
-        - {name: "github", link: "https://github.com/ozasadnyy"}
-    - 
-      id: 1
-      name: "Ostap"
-      surname: "Andrysiv"
-      organization: "ELEKS, GDG Lviv"
-      position: "R&D Engineer"
-      about: "Software engineer with experience in various computer technologies. Main areas of interest are web and mobile-based solutions. Interested in multi-national and multi-cultural software projects, which would offer an opportunity to demonstrate my communication and teamwork skills."
-      report: 
-        title: "Building Cloud-powered wearable Apps"
-        description: "Android wear extends the Android platform to a new generation of wearable devices. The user experience is designed specifically for wearables. In this session you’ll see how to use the Android Wear SDK to build a connected cloud-powered application. Using Android Studio and it’s cloud extensions, you’ll see how to build an app that ‘listens’ for changes in stock prices, and notifies a wearable device. You’ll also see how to use voice controls on the device to trigger interactions with the app, such as buying or selling the stock after a notification. Call to action: Get the SDK and start building apps today!"
-      color: "green"
-      team: true
-      social: 
-        - {name: "google-plus", link: "https://google.com/+OstapAndrusiv"}
-        - {name: "twitter", link: "https://twitter.com/p1f"}
-    - 
-      id: 2
-      name: "Vitaliy"
-      surname: "Zasadnyy"
-      organization: "Nravo, GDG Lviv"
-      position: "Team Lead, Unity 3D Developer"
-      about: "I'm mobile developer and Google Developers Group Lviv co-founder. I'm interested in GameDev, Android, iOS, Google App Engine and community management. Used to work for enterprise giants like EPAM as well as for product companies such as NRavo."
-      report: 
-        title: "The world is your playground - go global with Google"
-        description: "More than ever before, developing for global audience is a necessity than a luxury in today's world. Are you ready ... where to start? what does it entail? how do I do it? how to promote in local markets? This talk will address above questions for android, chrome and web developers. In our journey of the where, what and how, we will take an in-depth look at various internationalization and localization tools & strategies available to you."
-      color: "blue"
-      team: true
-      social: 
-        - {name: "google-plus", link: "https://google.com/+VitalikZasadnyy"}
-        - {name: "twitter", link: "https://twitter.com/zasadnyy"}
-        - {name: "site", link: "http://zasadnyy.org.ua/"}
-    - 
-      id: 3
-      name: "Valentyn"
-      surname: "Shybanov"
-      organization: "Twinfield, GDG Kyiv"
-      position: "Software engineer/country manager"
-      about: "Valentyn focuses on Polymer and Web Components. In previous roles he’s helped craft design systems for massive enterprise companies, user interfaces for console titles, and even built the occasional enchanted princess game. These days his mission is to fight for a better web and to help developers build great experiences."
-      report: 
-        title: "Polymer: Interacting with Google Services using nothing but HTML"
-        description: "Google has 1M APIs and services. Every API is different! Learn how you can interact with Google services without writing code! Designing your UI so it works across multiple screen sizes is no longer a nice to have, it is *the* way to build for the web. Using Polymer, we'll cover how to create robust, responsive elements that work across all platforms."
-      color: "violet"
-      team: false
-      social: 
-        - {name: "google-plus", link: "https://google.com/+ValentynShybanov"}
+- 
+  id: 0
+  name: "Oleh"
+  surname: "Zasadnyy"
+  company: "GDG Lviv"
+  title: "Designer"
+  bio: "Finalist of Google I/O 2013, GDG DevFest 2013, Google I/O 2014 T-Shirt design contest. Web developer."
+  thumbnailUrl: http://gdg-ukraine.github.io/devfest-2014/img/speakers/OlehZasadnyy.jpg
+  team: true
+  rockstar: true
+  social: 
+    - {name: "google-plus", link: "https://google.com/+OlehZasadnyy"}
+    - {name: "github", link: "https://github.com/ozasadnyy"}
+- 
+  id: 1
+  name: "Ostap"
+  surname: "Andrysiv"
+  company: "ELEKS, GDG Lviv"
+  title: "R&D Engineer"
+  bio: "Software engineer with experience in various computer technologies. Main areas of interest are web and mobile-based solutions. Interested in multi-national and multi-cultural software projects, which would offer an opportunity to demonstrate my communication and teamwork skills."
+  thumbnailUrl: http://gdg-ukraine.github.io/devfest-2014/img/speakers/OstapAndrysiv.jpg
+  team: true
+  rockstar: true
+  social: 
+    - {name: "google-plus", link: "https://google.com/+OstapAndrusiv"}
+    - {name: "twitter", link: "https://twitter.com/p1f"}
+- 
+  id: 2
+  name: "Vitaliy"
+  surname: "Zasadnyy"
+  company: "Nravo, GDG Lviv"
+  title: "Team Lead, Unity 3D Developer"
+  bio: "I'm mobile developer and Google Developers Group Lviv co-founder. I'm interested in GameDev, Android, iOS, Google App Engine and community management. Used to work for enterprise giants like EPAM as well as for product companies such as NRavo."
+  thumbnailUrl: http://gdg-ukraine.github.io/devfest-2014/img/speakers/VitaliyZasadnyy.jpg
+  team: true
+  rockstar: false
+  social: 
+    - {name: "google-plus", link: "https://google.com/+VitalikZasadnyy"}
+    - {name: "twitter", link: "https://twitter.com/zasadnyy"}
+    - {name: "site", link: "http://zasadnyy.org.ua/"}      
+- 
+  id: 3
+  name: "Valentyn"
+  surname: "Shybanov"
+  company: "Twinfield, GDG Kyiv"
+  title: "Software engineer/country manager"
+  bio: "Valentyn focuses on Polymer and Web Components. In previous roles he’s helped craft design systems for massive enterprise companies, user interfaces for console titles, and even built the occasional enchanted princess game. These days his mission is to fight for a better web and to help developers build great experiences."
+  thumbnailUrl: http://gdg-ukraine.github.io/devfest-2014/img/speakers/ValentynShybanov.jpg
+  team: false
+  rockstar: true
+  social: 
+    - {name: "google-plus", link: "https://google.com/+ValentynShybanov"}
+- 
+  id: 4
+  name: "Dan"
+  surname: "Shybanov"
+  company: "Twinfield, GDG Kyiv"
+  title: "Software engineer/country manager"
+  bio: "Valentyn focuses on Polymer and Web Components. In previous roles he’s helped craft design systems for massive enterprise companies, user interfaces for console titles, and even built the occasional enchanted princess game. These days his mission is to fight for a better web and to help developers build great experiences."
+  thumbnailUrl: http://gdg-ukraine.github.io/devfest-2014/img/speakers/ValentynShybanov.jpg
+  team: false
+  rockstar: true
+  social: 
+    - {name: "google-plus", link: "https://google.com/+ValentynShybanov"}
+- 
+  id: 5
+  name: "Ioan"
+  surname: "Shybanov"
+  company: "Twinfield, GDG Kyiv"
+  title: "Software engineer/country manager"
+  bio: "Valentyn focuses on Polymer and Web Components. In previous roles he’s helped craft design systems for massive enterprise companies, user interfaces for console titles, and even built the occasional enchanted princess game. These days his mission is to fight for a better web and to help developers build great experiences."
+  thumbnailUrl: http://gdg-ukraine.github.io/devfest-2014/img/speakers/ValentynShybanov.jpg
+  team: false
+  rockstar: true
+  social: 
+    - {name: "google-plus", link: "https://google.com/+ValentynShybanov"}
