@@ -6,42 +6,48 @@
             <div class="col-lg-8 col-md-10 col-xs-12">
 
                 {% for post in site.posts %}
-                <article class="row post">
-                    <a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}"><h4>{{ post.title }}</h4></a>
-                    <div class="post-header">
-                        <div class="published pull-left">
-                            <span class="caption">Posted:</span>
-                            <span class="publish-date" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</span>
+
+                    <article class="row post">
+                        <a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}"><h4>{{ post.title }}</h4></a>
+                        <div class="post-header">
+                            <div class="published pull-left">
+                                <span class="caption">Posted:</span>
+                                <span class="publish-date" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</span>
+                            </div>
+                            <div class="share pull-right">
+                                <ul class="social-links">
+                                    <li>
+                                        <a href="https://plus.google.com/share?url={{ post.url | prepend: site.baseurl | prepend: site.url }}" onclick="window.open('https://plus.google.com/share?url={{ post.url | prepend: site.baseurl | prepend: site.url }}', 'newwindow', 'width=600, height=500'); return false;">
+                                            <svg class="icon icon-google-plus" viewBox="0 0 30 32">
+                                                <use xlink:href="{{ site.baseurl }}/img/sprites/sprites.svg#icon-google-plus"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/home?status={{ post.url | prepend: site.baseurl | prepend: site.url }}" onclick="window.open('https://twitter.com/home?status={{ post.url | prepend: site.baseurl | prepend: site.url }}', 'newwindow', 'width=600, height=250'); return false;">
+                                            <svg class="icon icon-twitter" viewBox="0 0 30 32">
+                                                <use xlink:href="{{ site.baseurl }}/img/sprites/sprites.svg#icon-twitter"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ post.url | prepend: site.baseurl | prepend: site.url }}" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u={{ post.url | prepend: site.baseurl | prepend: site.url }}', 'newwindow', 'width=600, height=500'); return false;">
+                                            <svg class="icon icon-facebook" viewBox="0 0 30 32">
+                                                <use xlink:href="{{ site.baseurl }}/img/sprites/sprites.svg#icon-facebook"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="share pull-right">
-                            <ul class="social-links">
-                                <li>
-                                    <a href="https://plus.google.com/share?url={{ post.url | prepend: site.baseurl }}" target="_blank">
-                                        <svg class="icon icon-google-plus" viewBox="0 0 30 32">
-                                            <use xlink:href="{{ site.baseurl }}/img/sprites/sprites.svg#icon-google-plus"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com/home?status={{ post.url | prepend: site.baseurl }}" target="_blank">
-                                        <svg class="icon icon-twitter" viewBox="0 0 30 32">
-                                            <use xlink:href="{{ site.baseurl }}/img/sprites/sprites.svg#icon-twitter"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ post.url | prepend: site.baseurl }}" target="_blank">
-                                        <svg class="icon icon-facebook" viewBox="0 0 30 32">
-                                            <use xlink:href="{{ site.baseurl }}/img/sprites/sprites.svg#icon-facebook"></use>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <p class="post-body">{{ post.content }}</p>
-                </article>
-                {% endfor %} {% if paginator.total_pages > 1 %}
+                        <p class="post-body">{{ post.content }}</p>
+                    </article>
+
+                {% endfor %} 
+
+
+                {% if paginator.total_pages > 1 %}
+                
                 <div class="row">
                     <div class="pagination">
                         {% if paginator.previous_page %}
@@ -57,12 +63,14 @@
                         {% endif %}
                     </div>
                 </div>
+
                 {% endif %}
 
                 <div class="row text-center">
                     <p class="rss-subscribe">Subscribe <a href="{{ " /feed.xml " | prepend: site.baseurl }}">via RSS</a>
                     </p>
                 </div>
+
             </div>
         </div>
     </div>
