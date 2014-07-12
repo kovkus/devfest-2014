@@ -47,3 +47,7 @@ aboutUs: Google knows throughout the earth. Even people who fly out of the plane
 # Footer
 gplusFollowUsUrl: "https://plus.google.com/events/c9c0oh98tjmovmorbjq3eanesc0"
 twitterFollowUsUrl: "https://twitter.com/search?q=%23devfest%20%23ua&mode=realtime"
+
+# Blog
+blogCommentsEnabled: true
+discusShortName: "devfestua"

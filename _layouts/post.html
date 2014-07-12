@@ -55,6 +55,10 @@
 
                 </div>
 
+                {% if site.blogCommentsEnabled %}
+                    {% include disqus-comments.html %}
+                {% endif %}
+
                 {% include footer.html %}
 
             </div>

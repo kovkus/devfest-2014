@@ -10,7 +10,7 @@
                     {% assign postUrl = site.url | append: site.baseurl | append: post.url %} 
 
                     <article class="row post">
-                        <a href="{{ postUrl }}" title="{{ post.title }}"><h4>{{ post.title }}</h4></a>
+                        <a href="{{ site.baseurl | append: post.url }}" title="{{ post.title }}"><h4>{{ post.title }}</h4></a>
                         <div class="post-header">
                             <div class="published pull-left">
                                 <span class="caption">Posted:</span>
@@ -42,7 +42,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <p class="post-body">{{ post.content | truncate: 350 }} <a href="{{ postUrl }}">continue reading</a></p>
+                        <p class="post-body">{{ post.content | truncate: 350 }} <a href="{{ site.baseurl | append: post.url }}">continue reading</a></p>
                     </article>
 
                 {% endfor %} 
