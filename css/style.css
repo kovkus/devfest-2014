@@ -481,6 +481,7 @@ nav ul> li > a:hover {
 #top-speakers .name {
 	margin: 10px 0 2px;
 	font-size: 25px;
+	line-height: 1.1;
 }
 #top-speakers .sub {
 	margin: 0 0 15px;
@@ -757,7 +758,15 @@ nav ul> li > a:hover {
 	background-position: 0;
 	-webkit-background-size: 105% 105%;
 	background-size: 105%;
-	opacity: .9;
+}
+.team-item .overlay,
+.speaker-item .overlay {
+	background: rgba(0, 0, 0, 0);
+	-webkit-transition: all 0.35s;
+	transition: all 0.35s;
+}
+.speaker-item:hover .overlay {
+	background: rgba(0, 0, 0, .2);
 }
 .speaker-item figure figcaption {
 	position: absolute;
@@ -851,6 +860,15 @@ nav ul> li > a:hover {
 .speaker-modal h4 {
 	color: #212121;
 	font-weight: 300;
+}
+.theme-language {
+	font-size: 1.1em;
+}
+.theme-language .caption {
+	color: #000;
+}
+.theme-description {
+	margin: .8em 0 2.5em;
 }
 .speaker-details .row {
 	margin-top: 1.5em;
@@ -959,11 +977,6 @@ nav ul> li > a:hover {
 	background-position: 0;
 	-webkit-background-size: 105% 105%;
 	background-size: 105%;
-}
-.team-item .overlay {
-	background: rgba(0, 0, 0, 0);
-	-webkit-transition: all 0.35s;
-	transition: all 0.35s;
 }
 .team-item:hover .overlay {
 	background: rgba(0, 0, 0, .3);
@@ -1189,12 +1202,6 @@ nav ul> li > a:hover {
 	position: relative;
 	fill: #333;
 }
-.icon-mode {
-	width: 20px;
-	height: 20px;
-	-webkit-transition: all 0.5s;
-	transition: all 0.5s;
-}
 .location-details select {
 	margin-left: -5px;
 	border: none;
@@ -1344,13 +1351,15 @@ nav ul> li > a:hover {
 }
 .social-links li {
 	display: inline-block;
-	margin-right: .3em;
 }
 .icon-vk,
 .icon-car,
+.icon-rss,
 .icon-site,
 .icon-flag,
+.icon-mode,
 .icon-email,
+.icon-skype,
 .icon-flight,
 .icon-github,
 .icon-twitter,
@@ -1359,11 +1368,12 @@ nav ul> li > a:hover {
 .icon-walking,
 .icon-facebook,
 .icon-linkedin,
+.icon-pinterest,
 .icon-bicycling,
 .icon-direction,
+.icon-geolocation,
 .icon-google-plus,
-.icon-stack-overflow,
-.icon-location-arrow {
+.icon-stack-overflow {
 	width: 16px;
 	height: 16px;
 	-webkit-transition: all 0.5s;
@@ -1373,11 +1383,17 @@ nav ul> li > a:hover {
 .icon-vk:hover {
 	fill: #4C75A3;
 }
+.icon-rss:hover {
+	fill: #f99638;
+}
 .icon-site:hover {
 	fill: #ba620b;
 }
 .icon-email:hover {
 	fill: #e34c41;
+}
+.icon-skype:hover {
+	fill: #01aef2;
 }
 .icon-github:hover {
 	fill: #464646;
@@ -1390,6 +1406,9 @@ nav ul> li > a:hover {
 }
 .icon-facebook:hover {
 	fill: #3C599B;
+}
+.icon-pinterest:hover {
+	fill: #ed0103;
 }
 .icon-linkedin:hover {
 	fill: #017eb4;
@@ -1712,12 +1731,12 @@ nav ul> li > a:hover {
 	/* --END LOGISTICS */
 	/* BLOG */
 	#blog h3 {
-		margin-top: 0;	
+		margin-top: 0;
 	}
 	.post {
-	margin-bottom: 2em;
-	max-width: 750px;
-}
+		margin-bottom: 2em;
+		max-width: 750px;
+	}
 	/* --END BLOG */
 	/* FOOTER */
 	#footer {
