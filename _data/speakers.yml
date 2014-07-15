@@ -14,11 +14,11 @@
 - 
   id: 1
   name: "Ostap"
-  surname: "Andrysiv"
+  surname: "Andrusiv"
   company: "ELEKS, GDG Lviv"
   title: "R&D Engineer"
   bio: "Software engineer with experience in various computer technologies. Main areas of interest are web and mobile-based solutions. Interested in multi-national and multi-cultural software projects, which would offer an opportunity to demonstrate my communication and teamwork skills."
-  thumbnailUrl: http://gdg-ukraine.github.io/devfest-2014/img/speakers/OstapAndrysiv.jpg
+  thumbnailUrl: http://gdg-ukraine.github.io/devfest-2014/img/speakers/OstapAndrusiv.jpg
   team: true
   rockstar: true
   social: 
