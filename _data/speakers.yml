@@ -17,13 +17,14 @@
   surname: "Andrusiv"
   company: "ELEKS, GDG Lviv"
   title: "R&D Engineer"
-  bio: "Software engineer with experience in various computer technologies. Main areas of interest are web and mobile-based solutions. Interested in multi-national and multi-cultural software projects, which would offer an opportunity to demonstrate my communication and teamwork skills."
+  bio: "Creating awesome stuff as R&D Engineer at ELEKS. Breaking Glass as Glass Explorer for Google. Making devs happy via GDG Lviv events. Bringing joy and happiness to large and unwieldy enterprise development."
   thumbnailUrl: http://gdg-ukraine.github.io/devfest-2014/img/speakers/OstapAndrusiv.jpg
   team: true
   rockstar: true
   social: 
     - {name: "google-plus", link: "https://google.com/+OstapAndrusiv"}
     - {name: "twitter", link: "https://twitter.com/p1f"}
+    - {name: "site", link: "http://andrusiv.com/"}
 - 
   id: 2
   name: "Vitaliy"
