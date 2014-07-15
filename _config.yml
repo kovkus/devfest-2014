@@ -47,6 +47,7 @@ aboutUs: Google's services have become synonymous with simple things online. Num
 # Footer
 gplusFollowUsUrl: "https://plus.google.com/events/c9c0oh98tjmovmorbjq3eanesc0"
 twitterFollowUsUrl: "https://twitter.com/search?q=%23devfest%20%23ua&mode=realtime"
+fbFollowUsUrl: "https://facebook.com/GDGLviv"
 
 # Blog
 blogCommentsEnabled: true
