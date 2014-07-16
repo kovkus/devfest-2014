@@ -322,6 +322,9 @@
                     stylers: [
                         {
                             visibility: 'on'
+     },
+                        {
+                            saturation: -10
      }
     ]
    }
