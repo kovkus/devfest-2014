@@ -3,6 +3,7 @@ layout: post
 title:  "Meet the five Giving through Glass winners"
 date:   2014-07-12 12:40:41
 categories: google glass
+isStaticPost: false
 ---
 
 We believe 

@@ -3,6 +3,7 @@ layout: post
 title:  "Build the best summer ever at Maker Camp 2014"
 date:   2014-07-11 17:40:41
 categories: google maker camp
+isStaticPost: false
 ---
 
 This post comes to us from Dale Dougherty, founder and publisher of MAKE: magazine and Maker Faire. For the third straight year, Google and Make have come together to put on Maker Camp, a free, online summer camp for teens on Google+. Building on 2 million past participants, Maker Camp 2014 officially kicks off today at 11 a.m. PDT / 2 p.m. EDT today with a Hangout featuring NASA and Buzz Aldrin. -Ed.
