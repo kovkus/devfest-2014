@@ -123,17 +123,17 @@ h6 {
 }
 .logo-dark {
     background-image: url('../img/sprites/logos.svg');
-    background-position: 0 0;
+    background-position: 0 -1px;
     background-repeat: no-repeat;
 }
 .logo-gray {
     background-image: url('../img/sprites/logos.svg');
-    background-position: 0 -60px;
+    background-position: 0 -63px;
     background-repeat: no-repeat;
 }
 .logo-light {
     background-image: url('../img/sprites/logos.svg');
-    background-position: 0 -120px;
+    background-position: 0 -127px;
     background-repeat: no-repeat;
 }
 /* Container */
