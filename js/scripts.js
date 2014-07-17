@@ -322,9 +322,15 @@
                     stylers: [
                         {
                             visibility: 'on'
-     },
+     }
+    ]
+   },
+                {
+                    featureType: 'road',
+                    elementType: "labels",
+                    stylers: [
                         {
-                            saturation: -10
+                            saturation: -30
      }
     ]
    }

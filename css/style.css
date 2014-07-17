@@ -8,6 +8,7 @@ html {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
     font-size: 13px;
     font-family: 'Roboto', sans-serif;
+
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale !important;
@@ -87,6 +88,7 @@ h6 {
 }
 .colored {
     color: #4285f4;
+
     fill: #4285f4;
 }
 .btn {
@@ -107,6 +109,7 @@ h6 {
     text-transform: uppercase;
     font: inherit;
     cursor: pointer;
+
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -119,6 +122,7 @@ h6 {
     display: inline-block;
     width: 32px;
     height: 32px;
+
     fill: #464646;
 }
 .logo-dark {
@@ -214,6 +218,7 @@ h6 {
     background: #fff;
     -webkit-box-shadow: 0 1px 7px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.15);
     box-shadow: 0 1px 7px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.15);
+
     -o-border-radius: 4px;
 }
 .same-height {
@@ -685,6 +690,7 @@ nav ul> li > a:hover {
     width: 20px;
     height: 20px;
     cursor: pointer;
+
     fill: #e6e6e6;
 }
 .bottom-navlinks {
@@ -1122,12 +1128,57 @@ nav ul> li > a:hover {
     color: #fff;
     text-transform: uppercase;
     font-size: 1.25em;
+
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 .speaker-item figure figcaption::before,
 .speaker-item figure figcaption::after {
     pointer-events: none;
+}
+.speaker-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translateX(79%);
+    -ms-transform: translateX(79%);
+    transform: translateX(79%);
+}
+.team-item:hover .speaker-badge {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+.speaker-badge-wrapper {
+    display: inline-block;
+    width: 45px;
+}
+.speaker-badge img {
+    float: right;
+    max-width: 45px;
+    max-height: 45px;
+}
+.speaker-badge span {
+    position: relative;
+    top: -16px;
+    display: inline-block;
+    margin-left: .3em;
+    font-size: 1.1em;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translateX(10%);
+    -ms-transform: translateX(10%);
+    transform: translateX(10%);
+}
+.team-item:hover .speaker-badge span {
+    -webkit-transition-delay: 0.25s;
+    transition-delay: 0.25s;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
 }
 .speaker-item figure h2 {
     word-spacing: -0.15em;
@@ -1199,6 +1250,7 @@ nav ul> li > a:hover {
     text-overflow: ellipsis;
     font-size: 16px;
     line-height: 1.5;
+
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
@@ -1259,6 +1311,7 @@ nav ul> li > a:hover {
     width: 19px;
     height: 19px;
     outline: none;
+
     fill: #000;
 }
 .close-mask {
@@ -1385,6 +1438,7 @@ nav ul> li > a:hover {
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0);
+
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
 }
@@ -1400,6 +1454,11 @@ nav ul> li > a:hover {
     transition: transform 0.35s;
     -webkit-transform: translate3d(0, 200%, 0);
     transform: translate3d(0, 200%, 0);
+}
+.team-item figure figcaption > div {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 .team-item:hover figure p {
     opacity: 1;
@@ -1480,6 +1539,7 @@ nav ul> li > a:hover {
     -ms-text-overflow: ellipsis;
     text-overflow: ellipsis;
     white-space: nowrap;
+
     -o-text-overflow: ellipsis;
 }
 .location-active .location-input {
@@ -1523,6 +1583,7 @@ nav ul> li > a:hover {
     -webkit-transform: translateY(2px);
     -ms-transform: translateY(2px);
     transform: translateY(2px);
+
     fill: #717171;
 }
 .location-details {
@@ -1554,6 +1615,7 @@ nav ul> li > a:hover {
     position: relative;
     top: 3px;
     margin-right: 7px;
+
     fill: #333;
 }
 .location-details select {
@@ -1735,6 +1797,7 @@ nav ul> li > a:hover {
     height: 16px;
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
+
     fill: #8b8b8b;
 }
 .icon-vk:hover {
@@ -1838,6 +1901,7 @@ nav ul> li > a:hover {
     /* TOP SECTION HERO*/
     #top-section-hero .jumbotron {
         left: 0;
+        margin-top: 0;
         padding: 30px;
     }
     .jumbotron h1 {
@@ -1855,6 +1919,7 @@ nav ul> li > a:hover {
     .jumbotron {
         position: relative;
         left: 1em;
+        margin-top: 9em;
         padding-bottom: 2em;
         padding-left: 0;
     }
