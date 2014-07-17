@@ -9,7 +9,7 @@
   team: true
   rockstar: true
   badge: 
-    - {title: "Google Developer Group", url: "http://localhost:4000//devfest-2014/img/svg/gdg.svg"}
+    - {title: "Google Developer Group", url: "http://gdg-ukraine.github.io/devfest-2014/img/svg/gdg.svg"}
   social: 
     - {name: "google-plus", link: "https://google.com/+OlehZasadnyy"}
     - {name: "github", link: "https://github.com/ozasadnyy"}
@@ -24,7 +24,7 @@
   team: true
   rockstar: true
   badge: 
-    - {title: "Google Developer Group", url: "http://localhost:4000//devfest-2014/img/svg/gdg.svg"}
+    - {title: "Google Developer Group", url: "http://gdg-ukraine.github.io/devfest-2014/img/svg/gdg.svg"}
   social: 
     - {name: "google-plus", link: "https://google.com/+OstapAndrusiv"}
     - {name: "twitter", link: "https://twitter.com/p1f"}
@@ -40,7 +40,7 @@
   team: true
   rockstar: true
   badge: 
-    - {title: "Google Developer Expert", url: "http://localhost:4000//devfest-2014/img/svg/gde.svg"}
+    - {title: "Google Developer Expert", url: "http://gdg-ukraine.github.io/devfest-2014/img/svg/gde.svg"}
   social: 
     - {name: "google-plus", link: "https://google.com/+VitalikZasadnyy"}
     - {name: "twitter", link: "https://twitter.com/zasadnyy"}
