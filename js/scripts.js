@@ -1,7 +1,7 @@
-(function ($) {
-    $(document).ready(function () {
+(function($) {
+    $(document).ready(function() {
         $('body').css('overflow', 'hidden');
-        $(window).load(function () {
+        $(window).load(function() {
             var preloaderDelay = 350,
                 preloaderFadeOutTime = 800;
 
@@ -28,7 +28,7 @@
             $('#logo-header').removeClass('logo-light').addClass('logo-dark');
         }
 
-        $(window).scroll(function () {
+        $(window).scroll(function() {
             var scroll = $(this).scrollTop();
             var header = $('#top-header');
             var logo = $('#logo-header');
@@ -49,15 +49,15 @@
                 buyButton.fadeIn(400);
                 buyButton.removeClass('hidden');
             } else {
-                buyButton.fadeOut(400, function () {
+                buyButton.fadeOut(400, function() {
                     buyButton.addClass('hidden');
                 });
             }
         });
 
-        $(function () {
+        $(function() {
             var idArray = [];
-            $('.rockstar-speakers-item').each(function () {
+            $('.rockstar-speakers-item').each(function() {
                 idArray[idArray.length] = $(this).attr('data-id');
             });
             idArray = shuffleArray(idArray);
@@ -72,16 +72,16 @@
         };
 
         var delay = parseInt($('.increment-animation').attr('data-delay'));
-        $('.increment-animation').not('hidden').each(function (index) {
+        $('.increment-animation').not('hidden').each(function(index) {
             $(this).attr('data-delay', index * delay);
         });
 
-        $('.animated').appear(function () {
+        $('.animated').appear(function() {
             var element = $(this);
             var animation = element.data('animation');
             var animationDelay = element.data('delay');
             if (animationDelay) {
-                setTimeout(function () {
+                setTimeout(function() {
                     element.addClass(animation + " visible");
                     element.removeClass('hiding');
                     if (element.hasClass('counter')) {
@@ -99,8 +99,8 @@
             accY: -150
         });
 
-        $(function () {
-            $('a[href*=#]:not([href=#])').click(function () {
+        $(function() {
+            $('a[href*=#]:not([href=#])').click(function() {
                 if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
                     var target = $(this.hash);
                     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -114,43 +114,43 @@
             });
         });
 
-        $(function () {
-            $('a[href=#]').click(function () {
+        $(function() {
+            $('a[href=#]').click(function() {
                 event.preventDefault();
             });
         });
 
         function generateSameHeight() {
             if ($(window).width() > 767) {
-                $('.same-height-wrapper').each(function () {
+                $('.same-height-wrapper').each(function() {
                     var max = 0;
-                    $('.same-height').each(function () {
+                    $('.same-height').each(function() {
                         var height = $(this).height();
                         if (height > max) {
                             max = height;
                         }
                     });
-                    $('.same-height').each(function () {
+                    $('.same-height').each(function() {
                         $(this).height(max);
                     });
                 });
             }
         }
 
-        $('#post-section .post-body p').each(function () {
+        $('#post-section .post-body p').each(function() {
             if ($(this).find('.feature-image').length) {
                 var url = $(this).find('.feature-image').prop('src');
-                $('#top-section').css('background-image', 'url(' + url + ')');
+                $('#top-section').css('background-image', 'url(' + url + ')').addClass('enable-overlay');
             }
         });
 
-        $('.slider').each(function () {
+        $('.slider').each(function() {
             $(this).find('.slider-item').first().addClass('slider-current-item').removeClass('hidden');
             if ($(this).find('.slider-item').length > 1) {
                 $(this).closest('.speaker-item').find('.slider-next-item').removeClass('hidden');
             }
         });
-        $('.slider-next-item').click(function () {
+        $('.slider-next-item').click(function() {
             var speakerItem = $(this).closest('.speaker-item');
             var elem = speakerItem.find('.slider-current-item').next();
             if (elem.length) {
@@ -164,7 +164,7 @@
 
         //Side menu
         var container = $('.st-container');
-        $('#menu-trigger').click(function (event) {
+        $('#menu-trigger').click(function(event) {
             event.stopPropagation();
             var top = $(window).scrollTop();
             var left = $(window).scrollLeft()
@@ -178,14 +178,14 @@
                 $('body').css('overflow', 'auto');
             }
         });
-        $('.st-pusher').click(function () {
+        $('.st-pusher').click(function() {
             if (container.hasClass('st-menu-open')) {
                 container.removeClass('st-menu-open');
                 $('body').css('overflow', 'auto');
             }
         });
 
-        $(window).resize(function () {
+        $(window).resize(function() {
             if ($(window).width() > 767) {
                 if (container.hasClass('st-menu-open')) {
                     container.removeClass('st-menu-open');
@@ -204,16 +204,16 @@
             }
         });
 
-        $('.modal').on('show.bs.modal', function () {
+        $('.modal').on('show.bs.modal', function() {
             $('body').css('overflow', 'hidden');
         });
-        $('.modal').on('hide.bs.modal', function () {
+        $('.modal').on('hide.bs.modal', function() {
             $('body').css('overflow', 'auto');
         });
     });
 
     //Google plus
-    (function () {
+    (function() {
         var po = document.createElement('script');
         po.type = 'text/javascript';
         po.async = true;
@@ -241,100 +241,65 @@
                 strokeWeight: 2
             });
 
-            var defaultOpts = [
-                {
-                    stylers: [
-                        {
-                            lightness: 40
-     },
-                        {
-                            visibility: 'on'
-     },
-                        {
-                            gamma: 0.9
-     },
-                        {
-                            weight: 0.4
-     }
-    ]
-   },
-                {
-                    elementType: 'labels',
-                    stylers: [
-                        {
-                            visibility: 'off'
-     }
-    ]
-   },
-                {
-                    featureType: 'water',
-                    stylers: [
-                        {
-                            color: '#5dc7ff'
-     }
-    ]
-   },
-                {
-                    featureType: 'road',
-                    stylers: [
-                        {
-                            visibility: 'off'
-     }
-    ]
-   }
-  ];
+            var defaultOpts = [{
+                stylers: [{
+                    lightness: 40
+                }, {
+                    visibility: 'on'
+                }, {
+                    gamma: 0.9
+                }, {
+                    weight: 0.4
+                }]
+            }, {
+                elementType: 'labels',
+                stylers: [{
+                    visibility: 'off'
+                }]
+            }, {
+                featureType: 'water',
+                stylers: [{
+                    color: '#5dc7ff'
+                }]
+            }, {
+                featureType: 'road',
+                stylers: [{
+                    visibility: 'off'
+                }]
+            }];
 
-            var zoomedOpts = [
-                {
-                    stylers: [
-                        {
-                            lightness: 40
-     },
-                        {
-                            visibility: 'on'
-     },
-                        {
-                            gamma: 1.1
-     },
-                        {
-                            weight: 0.9
-     }
-    ]
-   },
-                {
-                    elementType: 'labels',
-                    stylers: [
-                        {
-                            visibility: 'off'
-     }
-    ]
-   },
-                {
-                    featureType: 'water',
-                    stylers: [
-                        {
-                            color: '#5dc7ff'
-     }
-    ]
-   },
-                {
-                    featureType: 'road',
-                    stylers: [
-                        {
-                            visibility: 'on'
-     }
-    ]
-   },
-                {
-                    featureType: 'road',
-                    elementType: "labels",
-                    stylers: [
-                        {
-                            saturation: -30
-     }
-    ]
-   }
-  ];
+            var zoomedOpts = [{
+                stylers: [{
+                    lightness: 40
+                }, {
+                    visibility: 'on'
+                }, {
+                    gamma: 1.1
+                }, {
+                    weight: 0.9
+                }]
+            }, {
+                elementType: 'labels',
+                stylers: [{
+                    visibility: 'off'
+                }]
+            }, {
+                featureType: 'water',
+                stylers: [{
+                    color: '#5dc7ff'
+                }]
+            }, {
+                featureType: 'road',
+                stylers: [{
+                    visibility: 'on'
+                }]
+            }, {
+                featureType: 'road',
+                elementType: "labels",
+                stylers: [{
+                    saturation: -30
+                }]
+            }];
 
             var mapOptions = {
                 zoom: 17,
@@ -385,7 +350,7 @@
                 map.setMapTypeId('default');
                 var input = (document.getElementById('location-input'));
                 autocomplete = new google.maps.places.Autocomplete(input);
-                google.maps.event.addListener(autocomplete, 'place_changed', function () {
+                google.maps.event.addListener(autocomplete, 'place_changed', function() {
                     marker.setVisible(false);
                     var place = autocomplete.getPlace();
                     if (place.geometry == 'undefined' || !place.geometry) {
@@ -395,11 +360,11 @@
                     if (place.address_components) {
                         address = [
                             (place.address_components[0] && place.address_components[0].short_name || ''), (place.address_components[1] && place.address_components[1].short_name || ''), (place.address_components[2] && place.address_components[2].short_name || '')
-     ].join(' ');
+                        ].join(' ');
                     }
                     geocoder.geocode({
                         'address': address
-                    }, function (results, status) {
+                    }, function(results, status) {
                         if (status == google.maps.GeocoderStatus.OK) {
                             origin = results[0].geometry.location;
                             calcRoute(origin, 'TRANSIT');
@@ -419,7 +384,7 @@
                     destination: eventPlace,
                     travelMode: google.maps.TravelMode[selectedMode]
                 };
-                directionsService.route(request, function (response, status) {
+                directionsService.route(request, function(response, status) {
                     if (status == google.maps.DirectionsStatus.OK) {
                         map.setMapTypeId('zoomed');
                         directionsDisplay.setMap(map);
@@ -490,7 +455,7 @@
                 var numOfSteps = Math.abs(level - currentZoom);
                 var step = (level > currentZoom) ? 1 : -1;
                 for (var i = 0; i < numOfSteps; i++) {
-                    setTimeout(function () {
+                    setTimeout(function() {
                         currentZoom += step;
                         map.setZoom(currentZoom);
                     }, (i + 1) * timeStep);
@@ -500,10 +465,10 @@
             function setDirectionInput(origin) {
                 geocoder.geocode({
                     'latLng': origin
-                }, function (results, status) {
+                }, function(results, status) {
                     if (status == google.maps.GeocoderStatus.OK && results[1]) {
                         var arrAddress = results[1].address_components;
-                        $.each(arrAddress, function (i, address_component) {
+                        $.each(arrAddress, function(i, address_component) {
                             if (address_component.types[0] == "locality") {
                                 $('#result-name').text(address_component.long_name);
                                 return false;
@@ -513,22 +478,22 @@
                 });
             }
 
-            $('#mode-select').change(function () {
+            $('#mode-select').change(function() {
                 var selectedMode = $(this).val();
                 calcRoute(origin, selectedMode);
             });
 
 
-            $("#direction-locate").click(function () {
+            $("#direction-locate").click(function() {
                 if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(function (position) {
+                    navigator.geolocation.getCurrentPosition(function(position) {
                         origin = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
                         calcRoute(origin, 'TRANSIT');
                     });
                 }
             });
 
-            $("#direction-cancel").click(function () {
+            $("#direction-cancel").click(function() {
                 $('#find-way').removeClass('location-active');
                 $('#location-input').val('');
                 $("#find-flight").addClass('hidden');

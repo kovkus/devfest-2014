@@ -7,13 +7,15 @@
                 <div class="team-item animated hiding increment-animation" data-animation="fadeInUp" data-delay="500">
                     <figure class="flow-img" style="background-image: url({{ speaker.thumbnailUrl }})">
                         <div class="overlay"></div>
-                        {% if speaker.badge != null %}
-                        <div class="speaker-badge">
-                            <div class="speaker-badge-wrapper">
-                                <img src="{{ speaker.badge[0]["url"] }}" alt="{{ speaker.badge[0]["title"] }}">
-                            </div>
-                            <span>{{ speaker.badge[0]["title"] }}</span>
-                        </div>
+                        {% if speaker.ribbon != null %}
+                        <ul class="speaker-ribbon-wrapper">
+                            {% for ribbon in speaker.ribbon %}
+                            <li>
+                                <p class="speaker-ribbon abbr">{{ ribbon["abbr"] }}</p>
+                                <p class="speaker-ribbon full-title">{{ ribbon["title"] }}</p>
+                            </li>
+                            {% endfor %}
+                        </ul>
                         {% endif %}
                         <figcaption>
                             <div class="col-md-9 col-xs-9 text-left">
@@ -21,15 +23,15 @@
                                 <div class="clearfix"></div>
                                 <span class="position">{{ speaker.company }}</span>
                             </div>
-                                {% for social in speaker.social %}
-                                <a href="{{ social[" link "] }}" target="_blank">
-                                    <svg class="icon icon-{{ social["name"] }}" viewBox="0 0 30 32">
-                                        <use xlink:href="{{ site.baseurl }}/img/sprites/sprites.svg#icon-{{ social["name"] }}"></use>
-                                    </svg>
-                                </a>
-                                {% endfor %}
+                            {% for social in speaker.social %}
+                            <a href="{{ social["link"] }}" target="_blank">
+                                <svg class="icon icon-{{ social["name"] }}" viewBox="0 0 30 32">
+                                    <use xlink:href="{{ site.baseurl }}/img/sprites/sprites.svg#icon-{{ social["name"] }}"></use>
+                                </svg>
+                            </a>
+                            {% endfor %}
                         </figcaption>
-                        <p>{{ speaker.bio }}</p>
+                        <p class="bio">{{ speaker.bio }}</p>
                     </figure>
                 </div>
             </div>

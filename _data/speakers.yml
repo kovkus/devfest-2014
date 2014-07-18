@@ -8,8 +8,8 @@
   thumbnailUrl: http://gdg-ukraine.github.io/devfest-2014/img/speakers/OlehZasadnyy.jpg
   team: true
   rockstar: true
-  badge: 
-    - {title: "Google Developer Group", url: "http://gdg-ukraine.github.io/devfest-2014/img/svg/gdg.svg"}
+  ribbon: 
+    - {abbr: "GDG", title: "Google Developer Group"}
   social: 
     - {name: "google-plus", link: "https://google.com/+OlehZasadnyy"}
     - {name: "github", link: "https://github.com/ozasadnyy"}
@@ -23,8 +23,9 @@
   thumbnailUrl: http://gdg-ukraine.github.io/devfest-2014/img/speakers/OstapAndrusiv.jpg
   team: true
   rockstar: true
-  badge: 
-    - {title: "Google Developer Group", url: "http://gdg-ukraine.github.io/devfest-2014/img/svg/gdg.svg"}
+  ribbon: 
+    - {abbr: "GDG", title: "Google Developer Group"}
+    - {abbr: "GDE", title: "Google Developer Expert"}
   social: 
     - {name: "google-plus", link: "https://google.com/+OstapAndrusiv"}
     - {name: "twitter", link: "https://twitter.com/p1f"}
@@ -39,8 +40,8 @@
   thumbnailUrl: http://gdg-ukraine.github.io/devfest-2014/img/speakers/VitaliyZasadnyy.jpg
   team: true
   rockstar: true
-  badge: 
-    - {title: "Google Developer Expert", url: "http://gdg-ukraine.github.io/devfest-2014/img/svg/gde.svg"}
+  ribbon: 
+    - {abbr: "GDE", title: "Google Developer Expert"}
   social: 
     - {name: "google-plus", link: "https://google.com/+VitalikZasadnyy"}
     - {name: "twitter", link: "https://twitter.com/zasadnyy"}
