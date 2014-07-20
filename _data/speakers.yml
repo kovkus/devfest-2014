@@ -5,7 +5,7 @@
   company: "GDG Lviv"
   title: "Designer"
   bio: "Finalist of Google I/O 2013, GDG DevFest 2013, Google I/O 2014 T-Shirt design contest. Web developer."
-  thumbnailUrl: http://gdg-ukraine.github.io/devfest-2014/img/speakers/OlehZasadnyy.jpg
+  thumbnailUrl: OlehZasadnyy.jpg
   team: true
   rockstar: true
   ribbon: 
@@ -20,7 +20,7 @@
   company: "ELEKS, GDG Lviv"
   title: "R&D Engineer"
   bio: "Creating awesome stuff as R&D Engineer at ELEKS. Breaking Glass as Glass Explorer for Google. Making devs happy via GDG Lviv events. Bringing joy and happiness to large and unwieldy enterprise development."
-  thumbnailUrl: http://gdg-ukraine.github.io/devfest-2014/img/speakers/OstapAndrusiv.jpg
+  thumbnailUrl: OstapAndrusiv.jpg
   team: true
   rockstar: true
   ribbon: 
@@ -37,7 +37,7 @@
   company: "Nravo, GDG Lviv"
   title: "Team Lead, Unity 3D Developer"
   bio: "I'm mobile developer and Google Developers Group Lviv co-founder. I'm interested in GameDev, Android, iOS, Google App Engine and community management. Used to work for enterprise giants like EPAM as well as for product companies such as NRavo."
-  thumbnailUrl: http://gdg-ukraine.github.io/devfest-2014/img/speakers/VitaliyZasadnyy.jpg
+  thumbnailUrl: VitaliyZasadnyy.jpg
   team: true
   rockstar: true
   ribbon: 
@@ -53,7 +53,7 @@
   company: "Twinfield, GDG Kyiv"
   title: "Software engineer/country manager"
   bio: "Valentyn focuses on Polymer and Web Components. In previous roles he’s helped craft design systems for massive enterprise companies, user interfaces for console titles, and even built the occasional enchanted princess game. These days his mission is to fight for a better web and to help developers build great experiences."
-  thumbnailUrl: http://gdg-ukraine.github.io/devfest-2014/img/speakers/ValentynShybanov.jpg
+  thumbnailUrl: ValentynShybanov.jpg
   team: false
   rockstar: true
   social: 
@@ -65,7 +65,7 @@
   company: "Twinfield, GDG Kyiv"
   title: "Software engineer/country manager"
   bio: "Valentyn focuses on Polymer and Web Components. In previous roles he’s helped craft design systems for massive enterprise companies, user interfaces for console titles, and even built the occasional enchanted princess game. These days his mission is to fight for a better web and to help developers build great experiences."
-  thumbnailUrl: http://gdg-ukraine.github.io/devfest-2014/img/speakers/ValentynShybanov.jpg
+  thumbnailUrl: ValentynShybanov.jpg
   team: false
   rockstar: false
   social: 
@@ -77,7 +77,7 @@
   company: "Twinfield, GDG Kyiv"
   title: "Software engineer/country manager"
   bio: "Valentyn focuses on Polymer and Web Components. In previous roles he’s helped craft design systems for massive enterprise companies, user interfaces for console titles, and even built the occasional enchanted princess game. These days his mission is to fight for a better web and to help developers build great experiences."
-  thumbnailUrl: http://gdg-ukraine.github.io/devfest-2014/img/speakers/ValentynShybanov.jpg
+  thumbnailUrl: ValentynShybanov.jpg
   team: false
   rockstar: true
   social: 

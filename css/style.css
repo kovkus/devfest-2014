@@ -713,6 +713,13 @@ nav ul > li > a.current, nav ul > li > a:hover {
     color: #fff;
     background: none;
 }
+
+#top-section-hero .jumbotron p {
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-weight: 200;
+}
+
 .explore {
     position: absolute;
     bottom: 4em;

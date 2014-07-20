@@ -10,25 +10,25 @@
             </li>
             <li><a {% if page.permalink == '/blog/' %} class="current" {% endif %} href="{{ site.baseurl }}/blog/">Blog</a>
             </li>
-            <li><a href="#">Schedule</a>
-            </li>
+            <!-- <li><a href="#">Schedule</a>
+            </li> -->
             <li><a {% if page.permalink == '/speakers/' %} class="current" {% endif %} href="{{ site.baseurl }}/speakers/">Speakers</a>
             </li>
             <li><a {% if page.permalink == '/team/' %} class="current" {% endif %} href="{{ site.baseurl }}/team/">Team</a>
             </li>
-            <li><a href="#">Hackathon</a>
-            </li>
+            <!-- <li><a href="#">Hackathon</a>
+            </li> -->
             <li><a {% if page.permalink == '/logistics/' %} class="current" {% endif %} href="{{ site.baseurl }}/logistics/">Logistics</a>
             </li>
         </ul>
         <ul id="bottom-navlinks" class="bottom-navlinks visible-xs">
-            <li><a href="#">Buy tickets</a>
-            </li>
-            <li><a href="#">Call for papers</a>
+            <!-- <li><a href="#">Buy tickets</a>
+            </li> -->
+            <li><a href="{{ site.c4pUrl }}">Become a speaker</a>
             </li>
         </ul>
         <span id="buy-tickets-button"  class="btn btn-primary waves-element waves-button waves-light waves-will-raise pull-right hidden-xs hidden-sm hidden">
-            <a href="#">Buy tickets</a>
+            <a href="{{ site.c4pUrl }}">Become a speaker</a>
         </span>
     </nav>
 </header>

@@ -5,7 +5,7 @@
             {% for speaker in site.data.speakers %}
             <div class="col-md-3 col-sm-3 col-xs-12">
                 <div class="team-item animated hiding increment-animation" data-animation="fadeInUp" data-delay="500">
-                    <figure class="flow-img" style="background-image: url({{ speaker.thumbnailUrl }})">
+                    <figure class="flow-img" style="background-image: url({{ site.baseurl | append: site.thumbnailsFolder | append: speaker.thumbnailUrl }})">
                         <div class="overlay"></div>
                         {% if speaker.ribbon != null %}
                         <ul class="speaker-ribbon-wrapper">
