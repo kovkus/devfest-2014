@@ -31,12 +31,15 @@
                             </a>
                             {% endfor %}
                         </figcaption>
-                        <p class="bio">{{ speaker.bio }}</p>
+                        <p class="bio">{{ speaker.bio | strip_html }}</p>
                     </figure>
                 </div>
             </div>
             {% endfor %}
         </div>
+        <span class="btn btn-primary waves-element waves-button waves-light waves-will-raise" style="margin-top: 25px;">
+               <a class="bottom-section-link" href="{{ site.c4pUrl }}" target="_blank">Become a speaker</a>
+        </span>        
     </div>
 </section>
 <!-- End Speakers List 2 -->
