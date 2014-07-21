@@ -12,7 +12,9 @@
             <div class="st-content">
 
                 {% include header.html %} 
+
                 {% include post.html isStaticPost=page.isStaticPost %} 
+                
                 {% include footer.html %}
 
             </div>
@@ -27,6 +29,7 @@
         window.jQuery || document.write('<script src="{{ "/js/jquery-2.1.1.min.js " | prepend: site.baseurl }}><\/script>')
     </script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="{{ "/js/waves.js" | prepend: site.baseurl }}"></script>
     <!-- Bootstrap JS local fallback -->
     <script>
         if (typeof ($.fn.modal) === 'undefined') {
