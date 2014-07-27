@@ -34,7 +34,7 @@ Check if you have [all requirments for local environment](http://jekyllrb.com/do
 
 jekyll serve -w
 ```
-Site will be available at http://127.0.0.1/:4000/devfest-2014/
+Site will be available at http://127.0.0.1:4000/devfest-2014/
 
 **NOTE:** in this mode all changes to html and data files will be automatically regenerated, but after changing ```_config.yml``` you have to restart server.
 
