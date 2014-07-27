@@ -72,7 +72,7 @@ Going to use template? Go on! The only thing we ask - let us know at *lviv[at]gd
 
 ### Contributors
 * Design and markup: [Oleh Zasadnyy](https://github.com/ozasadnyy)
-* Jekyll integration: [Vitaliy Zasadnyy](https://github.com/zasadnyy)
+* Idea and Jekyll integration: [Vitaliy Zasadnyy](https://github.com/zasadnyy)
 
 ### Licence
 Project is published under the [MIT licence](https://github.com/GDG-Ukraine/devfest-2014/blob/gh-pages/LICENSE.txt). Feel free to clone and modify repo as you want, but don'y forget to add reference to authors :)
