@@ -51,7 +51,7 @@ To minify CSS and JS run `minify_all.bat` from `/automation/minifying/` folder:
     minify_all.bat
 ```
 
-Learn more about available optimization options from [documentation](https://github.com/GDG-Ukraine/devfest-2014/wiki/Optimizations).
+Learn more about available optimization options from [documentation](https://github.com/GDG-Ukraine/devfest-2014/wiki/Resources-optimizations).
 
 ### Documentation
 Quick-start guide is not enough? Checkout [full documentation](https://github.com/GDG-Ukraine/devfest-2014/wiki).
