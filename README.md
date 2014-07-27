@@ -1,6 +1,6 @@
 # Project Zeppelin / GDG DevFest 2014 site template
 
-## About 
+### About 
 Project Zeppelin allows you to setup awesome GDG DevFest site in 5 minutes. 
 
 Project is builded on top of [Jekyll](http://jekyllrb.com/) - simple, blog-aware, static site generator. Jekyll also happens to be the engine behind GitHub Pages, which means you can use Jekyll to host your website from GitHub’s servers for free. [Learn more about Jekyll](http://jekyllrb.com/).
@@ -59,7 +59,7 @@ Quick-start guide is not enough? Checkout [full documentation]().
 
 ### TODO List
 * Schedule page template
-
+* Optimization scripts for mac and linux
 
 ### Known issues
 * Scrolling on open navbar
