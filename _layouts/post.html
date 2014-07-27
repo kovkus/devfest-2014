@@ -29,7 +29,6 @@
         window.jQuery || document.write('<script src="{{ "/js/jquery-2.1.1.min.js " | prepend: site.baseurl }}><\/script>')
     </script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="{{ "/js/waves.js" | prepend: site.baseurl }}"></script>
     <!-- Bootstrap JS local fallback -->
     <script>
         if (typeof ($.fn.modal) === 'undefined') {
@@ -37,6 +36,7 @@
         }
     </script>
     <script src="{{ "/js/jquery.appear.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/waves.min.js" | prepend: site.baseurl }}"></script>
     <script>
         $(document).ready(function () {
             var bodyColor = $('body').css('color');
@@ -45,7 +45,7 @@
             }
         });
     </script>
-    <script src="{{ "/js/scripts.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/scripts.min.js" | prepend: site.baseurl }}"></script>
 </body>
 
 </html>

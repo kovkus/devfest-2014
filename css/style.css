@@ -60,7 +60,7 @@ h4 {
     font-size: 3.125em;
 }
 h5 {
-    font-size: 2.5em;
+    font-size: 2.3em;
 }
 h6 {
     font-size: 1.875em;
@@ -105,8 +105,8 @@ h6 {
     background: #4285f4;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
-    background: #3266d5;
     outline: none;
+    background: #3266d5;
 }
 .icon {
     display: inline-block;
@@ -176,9 +176,6 @@ h6 {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
-    -webkit-background-size:
-    /*@@prefixmycss->No equivalent*/
-    ;
     background-size: cover;
     -webkit-box-shadow: inset 0 0 12px 3px rgba(0, 0, 0, .75);
     box-shadow: inset 0 0 12px 3px rgba(0, 0, 0, .75);
@@ -188,9 +185,6 @@ h6 {
     color: #fff;
     background-repeat: no-repeat;
     background-position: center center;
-    -webkit-background-size:
-    /*@@prefixmycss->No equivalent*/
-    ;
     background-size: cover;
 }
 .card {
@@ -527,6 +521,15 @@ h6 {
     float: none;
     margin: 0 auto;
 }
+.row-centered {
+    text-align: center;
+}
+.cols-centered {
+    display: inline-block;
+    float: none;
+    margin-right: -4px;
+    text-align: left;
+}
 .hiding {
     opacity: 0;
 }
@@ -538,9 +541,6 @@ h6 {
     width: 100%;
     height: 100%;
     background-position: center center;
-    -webkit-background-size:
-    /*@@prefixmycss->No equivalent*/
-    ;
     background-size: cover;
 }
 .overlay {
@@ -705,9 +705,6 @@ nav ul > li > a.current, nav ul > li > a:hover {
     padding-top: 0;
     background-repeat: no-repeat;
     background-position: center center;
-    -webkit-background-size:
-    /*@@prefixmycss->No equivalent*/
-    ;
     background-size: cover;
 }
 #top-section-hero .jumbotron {
@@ -720,13 +717,11 @@ nav ul > li > a.current, nav ul > li > a:hover {
     color: #fff;
     background: none;
 }
-
 #top-section-hero .jumbotron p {
-    margin-bottom: 15px;
     font-size: 25px;
     font-weight: 200;
+    margin-bottom: 15px;
 }
-
 .explore {
     position: absolute;
     bottom: 4em;
@@ -751,9 +746,6 @@ nav ul > li > a.current, nav ul > li > a:hover {
     background: #03a9f4;
     background-repeat: no-repeat;
     background-position: center center;
-    -webkit-background-size:
-    /*@@prefixmycss->No equivalent*/
-    ;
     background-size: cover;
 }
 #top-section .gradient-overlay {
@@ -980,13 +972,13 @@ nav ul > li > a.current, nav ul > li > a:hover {
 .location-description {
     z-index: 1;
     min-width: 400px;
-    padding: 20px 40px;
+    padding: 20px 50px;
     background: #fff;
 }
 .location-description .icon-direction {
     width: 32px;
     height: 32px;
-    margin: 1em;
+    margin: 1em 0;
 }
 .location-description ul {
     margin-top: 2em;
@@ -995,6 +987,7 @@ nav ul > li > a.current, nav ul > li > a:hover {
 }
 .location-description li {
     font-size: 1.6em;
+    font-weight: 200;
     margin-bottom: .4em;
 }
 #canvas-map {
@@ -1008,6 +1001,71 @@ nav ul > li > a.current, nav ul > li > a:hover {
     height: 700px;
 }
 /* --END LOCATION SECTION */
+
+/* VENUE SECTION */
+
+.venue-col {
+    height: 100%;
+    padding: 0;
+    padding-right: 5px;
+}
+.venue-col:last-child {
+    padding: 0;
+}
+.venue-elem-wrapper {
+    padding: 0;
+    padding-bottom: 5px;
+}
+.venue-elem {
+    overflow: hidden;
+}
+.venue-big-elem {
+    height: 610px;
+    background-position: center center;
+    background-size: cover;
+}
+.venue-small-elem {
+    height: 200px;
+    background-position: center center;
+    background-size: cover;
+}
+.venue-text {
+    padding: 30px 20px;
+    background: #03a9f4;
+    text-align: left;
+    color: #fff;
+}
+.venue-text p {
+    font-size: 1.4em;
+}
+.venue-text h5 {
+    margin-top: 0px;
+}
+/* --END VENUE SECTION */
+
+/* TWITTER FEED SECTION */
+
+#twitter-feed {
+    color: #fff;
+}
+#twitter-feed .icon {
+    width: 64px;
+    height: 64px;
+    fill: #fff;
+}
+.tweet {
+    height: 130px;
+}
+.tweet-text {
+    font-size: 2em;
+    font-weight: 200;
+    line-height: 1.3;
+}
+.tweet-meta {
+    font-size: 1.5em;
+    font-weight: 200;
+}
+/* --END TWITTER FEED SECTION */
 
 /* SPONSORS SECTION */
 
@@ -1106,7 +1164,7 @@ nav ul > li > a.current, nav ul > li > a:hover {
     background-size: 115%;
 }
 .speaker-item:hover figure {
-    background-position: 0;
+    background-position: center left;
     -webkit-background-size: 105% 105%;
     background-size: 105%;
 }
@@ -1372,6 +1430,8 @@ nav ul > li > a.current, nav ul > li > a:hover {
 }
 #team h4 {
     margin-top: 1.2em;
+    margin-bottom: .5em;
+    text-align: center;
 }
 .team-item figure {
     position: relative;
@@ -1615,10 +1675,10 @@ nav ul > li > a.current, nav ul > li > a:hover {
     list-style: none;
 }
 .location-details li {
-    line-height: 50px;
     font-weight: 400;
-    color: #333;
+    line-height: 50px;
     text-transform: uppercase;
+    color: #333;
     border-bottom: 1px solid #e7e7e7;
 }
 .location-details svg {
@@ -1629,9 +1689,9 @@ nav ul > li > a.current, nav ul > li > a:hover {
 }
 .location-details select {
     margin-left: -5px;
+    color: #333;
     border: none;
     outline: none;
-    color: #333;
 }
 .location-details select option {
     margin: 40px;
@@ -1696,12 +1756,17 @@ nav ul > li > a.current, nav ul > li > a:hover {
 /* --END LOGISTICS */
 
 /* BLOG */
+
 #post-section {
     padding-top: 20px;
 }
 .post {
     max-width: 750px;
     margin-bottom: 4em;
+}
+.post li {
+    font-size: 11pt;
+    line-height: 20pt;
 }
 .post-header {
     height: 20px;
@@ -1723,6 +1788,9 @@ nav ul > li > a.current, nav ul > li > a:hover {
 .post-body iframe, .post-body img {
     display: block;
     margin: 1.1em 0;
+}
+.post-body h4 {
+    margin-top: 1em;
 }
 .comments {
     margin-top: 2em;
@@ -1857,6 +1925,18 @@ nav ul > li > a.current, nav ul > li > a:hover {
         margin-top: .2em;
     }
     /* --END NAVBAR */
+    /* VENUE SECTION */
+    .venue-big-elem {
+        height: 490px;
+    }
+    .venue-small-elem {
+        height: 160px;
+    }
+    .venue-text p {
+        font-size: 1.2em;
+        line-height: 16pt;
+    }
+    /* --END VENUE SECTION */
     /* --SPEAKERS */
     .speaker-item figure figcaption {
         bottom: .5em;
@@ -2045,6 +2125,32 @@ nav ul > li > a.current, nav ul > li > a:hover {
         top: 0;
     }
     /* --END SECTION BUY TICKETS */
+    /* VENUE SECTION */
+    .venue-col {
+        padding: 0;
+    }
+    .venue-small-col .venue-elem-wrapper:nth-child(odd) {
+        padding-right: 2.5px;
+    }
+    .venue-small-col .venue-elem-wrapper:nth-child(even) {
+        padding-left: 2.5px;
+    }
+    .venue-big-elem {
+        height: 340px;
+    }
+    .venue-small-elem {
+        height: 180px;
+    }
+    .venue-text p {
+        font-size: 1.1em;
+        line-height: 13pt;
+    }
+    /* --END VENUE SECTION */
+    /* TWITTER FEED SECTON */
+    .tweet {
+        height: 200px;
+    }
+    /* --END TWITTER FEED SECTON */
     /* SPONSORS SECTION */
     #sponsors .list-inline li {
         width: 40%;
