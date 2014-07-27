@@ -1,40 +1,63 @@
-# GDG DevFest 2014 site template
+# Project Zeppelin / GDG DevFest 2014 site template
 
-### Demo
-You can always check current dev version at http://gdg-ukraine.github.io/devfest-2014/
+### About 
+Project Zeppelin allows you to setup awesome GDG DevFest site in 5 minutes. The only things you need to start are basic knowlage of HTML, YAML and GitHub account to host website. 
 
-### Local development
-Generate site: 
-```bash
+Project is builded on top of Jekyll - simple, blog-aware, static site generator. Jekyll also happens to be the engine behind GitHub Pages, which means you can use Jekyll to host your website from GitHub’s servers for free. [Learn more about Jekyll](http://jekyllrb.com/).
 
-jekyll build -w --config _config.yml,_config-local.yml
-```
+Template is brought by [GDG Lviv](http://lviv.gdg.org.ua/) team.
 
-Start local server: 
-```bash
+### Live demo http://gdg-ukraine.github.io/devfest-2014/
 
-jekyll serve --config _config.yml,_config-local.yml
-```
-
-### Benefits
-* Simple and beautiful design
-* Responsive
+### Features
+* Easy to setup
+* Simple and responsive design
+* Inegrated speakers and sessions management
 * SVG icons
-* Easily to configure
 * SEO friendly
 
+
+### Quick-start guide
+1. [Fork](https://github.com/GDG-Ukraine/devfest-2014/fork) this repo
+2. Clone locally
+3. Update ```_config.yml``` 
+4. Select what content blocks do you need
+5. Push changes to ```gh-pages``` brach
+6. Enjoy your awesome DevFest site at ```http://[your github name].github.io/devfest-2014/```
+
+
+### Local development
+
+Check if you have [all requirments for local environment](http://jekyllrb.com/docs/installation/), install [Jekyll server](http://jekyllrb.com/docs/quickstart/) gem and run this command from project root folder:
+
+```bash
+
+jekyll serve -w
+```
+
+**NOTE:** in this mode all changes to html and data files will be automatically regenerated, but after changing ```_config.yml``` you have to restart server.
+
+### Documentation
+Quick-start guide is not enough? Checkout [full documentation]().
+
+
 ### TODO List
-* Sprites for images
-* Minimize js & css
+* Schedule page template
+
 
 ### Known issues
-* ~~Stuck of parallax images~~
 * Scrolling on open navbar
 
+### Who is using template?
+Going to use template? Go on! The only thing we ask - let us know at lviv[at]gdg.org.ua so we can include you to this list, or make a pull request.
+
+* [GDG DevFest Instanbul 2014](http://devfesttr.com/)
+
 ### Contributors
-* Design and markup: [ozasadnyy](https://github.com/ozasadnyy)
-* Jekyll integration: [zasadnyy](https://github.com/zasadnyy)
+* Design and markup: [Oleh Zasadnyy](https://github.com/ozasadnyy)
+* Jekyll integration: [Vitaliy Zasadnyy](https://github.com/zasadnyy)
 
+### Licence
+Project is published under the [MIT licence](http://choosealicense.com/licenses/mit/). Feel free to clone and modify repo as you want, but don'y forget to add reference to authors :)
 
-#### _More information comming soon... Stay tuned!_
 
