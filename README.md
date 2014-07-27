@@ -1,6 +1,6 @@
 # Project Zeppelin / GDG DevFest 2014 site template
 
-### About 
+## About 
 Project Zeppelin allows you to setup awesome GDG DevFest site in 5 minutes. 
 
 Project is builded on top of [Jekyll](http://jekyllrb.com/) - simple, blog-aware, static site generator. Jekyll also happens to be the engine behind GitHub Pages, which means you can use Jekyll to host your website from GitHub’s servers for free. [Learn more about Jekyll](http://jekyllrb.com/).
@@ -26,17 +26,32 @@ Template is brought by [GDG Lviv](http://lviv.gdg.org.ua/) team.
 6. Enjoy your awesome DevFest site at ```http://[your github name].github.io/devfest-2014/```
 
 
-### Local development
+## Local development
 
 Check if you have [all requirments for local environment](http://jekyllrb.com/docs/installation/), install [Jekyll server](http://jekyllrb.com/docs/quickstart/) gem and run this command from project root folder:
 
 ```bash
-
-jekyll serve -w
+    jekyll serve -w
 ```
 Site will be available at http://127.0.0.1:4000/devfest-2014/
 
 **NOTE:** in this mode all changes to html and data files will be automatically regenerated, but after changing ```_config.yml``` you have to restart server.
+
+
+### Resource optimizations (optional)
+
+You can optimize images and minify css and javascript automaticaly (for now only on Windows).
+Optimize all images by running this script from `/automation/images/` folder:
+```bash
+    all_image_optimization.bat -d -jtran -pout -pquant -optip -gsicle -svgo
+```
+
+To minify CSS and JS run `minify_all.bat` from `/automation/minifying/` folder:
+```bash
+    minify_all.bat
+```
+
+Learn more about available optimization options from [documentation](https://github.com/GDG-Ukraine/devfest-2014/wiki/Optimizations).
 
 ### Documentation
 Quick-start guide is not enough? Checkout [full documentation]().
