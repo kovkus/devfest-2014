@@ -14,7 +14,7 @@ permalink: /blog/:title
 googleAnalyticsTrackingId: "UA-43643469-3"
 googleAnalyticsSiteUrl: "gdg-ukraine.github.io"
 
-# Locaion block
+# Location block
 eventLocationName: "Conference Hall"
 eventLocationAddress: "22 Teatral'na St, Lviv"
 eventStartTime: "2014-10-18T10:00"
