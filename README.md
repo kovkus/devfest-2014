@@ -52,6 +52,7 @@ Quick-start guide is not enough? Checkout [full documentation]().
 ### Who is using template?
 Going to use template? Go on! The only thing we ask - let us know at lviv[at]gdg.org.ua so we can include you to this list, or make a pull request.
 
+* [GDG DevFest Ukraine 2014](http://devfest.gdg.org.ua/)
 * [GDG DevFest Instanbul 2014](http://devfesttr.com/)
 
 ### Contributors
