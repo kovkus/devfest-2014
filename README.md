@@ -1,9 +1,9 @@
 # Project Zeppelin / GDG DevFest 2014 site template
 
 ### About 
-Project Zeppelin allows you to setup awesome GDG DevFest site in 5 minutes. The only things you need to start are basic knowlage of HTML, YAML and GitHub account to host website. 
+Project Zeppelin allows you to setup awesome GDG DevFest site in 5 minutes. 
 
-Project is builded on top of Jekyll - simple, blog-aware, static site generator. Jekyll also happens to be the engine behind GitHub Pages, which means you can use Jekyll to host your website from GitHub’s servers for free. [Learn more about Jekyll](http://jekyllrb.com/).
+Project is builded on top of [Jekyll](http://jekyllrb.com/) - simple, blog-aware, static site generator. Jekyll also happens to be the engine behind GitHub Pages, which means you can use Jekyll to host your website from GitHub’s servers for free. [Learn more about Jekyll](http://jekyllrb.com/).
 
 Template is brought by [GDG Lviv](http://lviv.gdg.org.ua/) team.
 
@@ -22,7 +22,7 @@ Template is brought by [GDG Lviv](http://lviv.gdg.org.ua/) team.
 2. Clone locally
 3. Update ```_config.yml``` 
 4. Select what content blocks do you need
-5. Push changes to ```gh-pages``` brach
+5. Push changes to ```gh-pages``` branch
 6. Enjoy your awesome DevFest site at ```http://[your github name].github.io/devfest-2014/```
 
 
@@ -34,6 +34,7 @@ Check if you have [all requirments for local environment](http://jekyllrb.com/do
 
 jekyll serve -w
 ```
+Site will be available at http://127.0.0.1/:4000/devfest-2014/
 
 **NOTE:** in this mode all changes to html and data files will be automatically regenerated, but after changing ```_config.yml``` you have to restart server.
 
